@@ -4,7 +4,7 @@ slug: "huiyi-guanli-youhua"
 date: 2026-06-19T20:20:00+08:00
 draft: false
 tags: ["管理", "会议", "效率", "团队协作"]
-categories: ["管理类"]
+categories: ["management"]
 description: "从会议数量、会议质量和管理机制三个角度，拆解低效会议背后的组织问题。"
 ---
 

@@ -38,15 +38,27 @@ languages:
         - name: "文章"
           url: "/zh/posts/"
           weight: 2
+        - name: "管理类"
+          url: "/zh/categories/management/"
+          weight: 3
+        - name: "旅游类"
+          url: "/zh/categories/travel/"
+          weight: 4
+        - name: "书籍类"
+          url: "/zh/categories/books/"
+          weight: 5
+        - name: "AI Native"
+          url: "/zh/categories/ai-native/"
+          weight: 6
         - name: "关于"
           url: "/zh/about/"
-          weight: 3
+          weight: 7
         - name: "标签"
           url: "/zh/tags/"
-          weight: 4
+          weight: 8
         - name: "搜索"
           url: "/zh/search/"
-          weight: 5
+          weight: 9
 
 # PaperMod 主题参数
 params:

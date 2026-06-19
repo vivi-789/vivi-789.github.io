@@ -4,7 +4,7 @@ slug: "fangquan-keng"
 date: 2026-06-19T20:10:00+08:00
 draft: false
 tags: ["管理", "授权", "团队协作", "职场"]
-categories: ["管理类"]
+categories: ["management"]
 description: "从新任管理者视角复盘授权、检查点、资源支持与团队情绪管理的常见误区。"
 ---
 
