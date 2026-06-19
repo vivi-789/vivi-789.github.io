@@ -1,5 +1,6 @@
 ---
 title: "会议越多，越需要优化管理机制"
+slug: "huiyi-guanli-youhua"
 date: 2026-06-19T20:20:00+08:00
 draft: false
 tags: ["管理", "会议", "效率", "团队协作"]

@@ -1,5 +1,6 @@
 ---
 title: "职场晋升的隐藏逻辑：不只是把活干好"
+slug: "jinsheng-luoji"
 date: 2026-06-19T20:40:00+08:00
 draft: false
 tags: ["管理", "晋升", "职场成长", "向上管理"]

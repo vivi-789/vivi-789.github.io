@@ -1,5 +1,6 @@
 ---
 title: "向上管理不是拍马屁，是管理者的必修课"
+slug: "xiangshang-guanli"
 date: 2026-06-19T20:30:00+08:00
 draft: false
 tags: ["管理", "向上管理", "沟通", "职场"]
