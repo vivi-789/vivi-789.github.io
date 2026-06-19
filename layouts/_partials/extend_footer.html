@@ -1,0 +1,39 @@
+{{- /* Footer custom content area start */ -}}
+<div class="progress-bar" aria-hidden="true"></div>
+<script>
+(function () {
+  const progress = document.querySelector('.progress-bar');
+  const header = document.querySelector('.header');
+  let lastY = window.scrollY;
+  let ticking = false;
+
+  function update() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    if (progress) progress.style.width = percent + '%';
+
+    const isArticle = document.querySelector('.post-single');
+    if (header && isArticle) {
+      const goingDown = scrollTop > lastY;
+      const pastHeader = scrollTop > 180;
+      header.classList.toggle('zen-hidden', goingDown && pastHeader);
+    }
+
+    lastY = Math.max(scrollTop, 0);
+    ticking = false;
+  }
+
+  function requestTick() {
+    if (!ticking) {
+      window.requestAnimationFrame(update);
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', requestTick, { passive: true });
+  window.addEventListener('resize', requestTick);
+  update();
+})();
+</script>
+{{- /* Footer custom content area end */ -}}

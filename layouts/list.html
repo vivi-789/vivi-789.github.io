@@ -1,0 +1,80 @@
+{{- define "main" }}
+{{- if .IsHome }}
+  {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
+  {{- $latest := index $pages 0 }}
+  <section class="zen-home-hero fade-in" aria-label="Featured writing">
+    {{- with $latest }}
+    <article class="zen-featured">
+      <div class="zen-eyebrow">Latest Essay</div>
+      <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+      <p class="zen-excerpt">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | htmlUnescape | truncate 180 }}{{ end }}</p>
+      <div class="zen-meta">{{ .Date.Format "2006年1月2日" }} · {{ .ReadingTime }} min read · {{ .WordCount }} Words</div>
+      <a class="zen-read-link" href="{{ .Permalink }}">Read the essay →</a>
+    </article>
+    {{- end }}
+
+    <aside class="zen-list-panel" aria-label="Recent articles">
+      <h2>Recent Notes</h2>
+      <ol class="zen-article-list">
+        {{- range first 5 (after 1 $pages) }}
+        <li>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+          <div class="zen-meta">{{ .Date.Format "2006年1月2日" }} · {{ .ReadingTime }} min · {{ .WordCount }} Words</div>
+        </li>
+        {{- end }}
+      </ol>
+    </aside>
+  </section>
+
+  <section class="zen-categories fade-in" aria-label="Knowledge categories">
+    <a class="zen-category-card" href="{{ "/categories/management/" | absLangURL }}">
+      <h2>管理类</h2>
+      <p>团队协作、管理方法、向上沟通与职场成长。</p>
+    </a>
+    <a class="zen-category-card" href="{{ "/categories/travel/" | absLangURL }}">
+      <h2>旅游类</h2>
+      <p>旅行观察、路线体验与反向旅行方式。</p>
+    </a>
+    <a class="zen-category-card" href="{{ "/categories/books/" | absLangURL }}">
+      <h2>书籍类</h2>
+      <p>读书笔记、书评与知识整理。</p>
+    </a>
+    <a class="zen-category-card" href="{{ "/categories/ai-native/" | absLangURL }}">
+      <h2>AI Native</h2>
+      <p>智能体、自动化工作流与 AI 应用实践。</p>
+    </a>
+  </section>
+{{- else }}
+  <header class="page-header fade-in">
+    {{- partial "breadcrumbs.html" . }}
+    <h1>{{ .Title }}</h1>
+    {{- if .Description }}<div class="post-description">{{ .Description | markdownify }}</div>{{- end }}
+  </header>
+  {{- if .Content }}
+  <div class="post-content md-content fade-in">
+    {{- if not (.Param "disableAnchoredHeadings") }}{{- partial "anchored_headings.html" .Content -}}{{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
+
+  {{- $pages := union .RegularPages .Sections }}
+  {{- $paginator := .Paginate $pages }}
+  <ol class="zen-article-list fade-in">
+    {{- range $paginator.Pages }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <div class="zen-meta">{{ .Date.Format "2006年1月2日" }} · {{ .ReadingTime }} min read · {{ .WordCount }} Words</div>
+    </li>
+    {{- end }}
+  </ol>
+
+  {{- if gt $paginator.TotalPages 1 }}
+  <footer class="page-footer">
+    <nav class="pagination">
+      {{- if $paginator.HasPrev }}<a class="prev" href="{{ $paginator.Prev.URL | absURL }}">« Prev</a>{{- end }}
+      {{- if $paginator.HasNext }}<a class="next" href="{{ $paginator.Next.URL | absURL }}">Next »</a>{{- end }}
+    </nav>
+  </footer>
+  {{- end }}
+{{- end }}
+{{- end }}

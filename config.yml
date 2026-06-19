@@ -1,6 +1,6 @@
 baseURL: "https://vivi-789.github.io"
 languageCode: "en-us"
-title: "My Knowledge Base"
+title: "Vivi's Journal"
 theme: "PaperMod"
 
 # 多语言配置
@@ -63,8 +63,8 @@ languages:
 # PaperMod 主题参数
 params:
   env: production
-  title: "My Knowledge Base"
-  description: "A personal knowledge base built with Hugo"
+  title: "Vivi's Journal"
+  description: "Essays on management, travel, books, and AI native thinking"
   keywords: [Blog, Knowledge Base, Hugo, PaperMod]
   author: "vivi-789"
   defaultTheme: auto
@@ -86,10 +86,9 @@ params:
 
   # 主页设置
   homeInfoParams:
-    Title: "Welcome 👋"
+    Title: "A quiet place for deliberate thinking"
     Content: >
-      This is my personal knowledge base where I store and share my learning notes.
-      Feel free to explore the posts below.
+      Essays on management, travel, books, and AI native practices — written for slow reading, reflection, and practical clarity.
 
   # 社交链接
   socialIcons:
