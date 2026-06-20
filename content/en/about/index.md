@@ -29,7 +29,7 @@ Replace this section with your own introduction. You can talk about:
 ### Contact
 
 - GitHub: [@vivi-789](https://github.com/vivi-789)
-- Email: your-email@example.com
+- Email: xinruyuan@gmail.com
 
 ---
 

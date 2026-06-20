@@ -102,7 +102,7 @@ params:
     - name: github
       url: "https://github.com/vivi-789"
     - name: email
-      url: "mailto:your-email@example.com"
+      url: "mailto:xinruyuan@gmail.com"
 
   # 搜索页面
   fuseOpts:

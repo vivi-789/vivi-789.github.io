@@ -60,7 +60,7 @@ hidemeta: true
 
 如对本声明有疑问，或认为本站内容存在侵权、不实、错误等情况，请通过以下方式联系作者，我会及时处理：
 
-- 邮箱：your-email@example.com
+- 邮箱：xinruyuan@gmail.com
 - GitHub：[@vivi-789](https://github.com/vivi-789)
 
 ---

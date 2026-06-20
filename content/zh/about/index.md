@@ -29,7 +29,7 @@ draft: false
 ### 联系方式
 
 - GitHub: [@vivi-789](https://github.com/vivi-789)
-- 邮箱: your-email@example.com
+- 邮箱: xinruyuan@gmail.com
 
 ---
 

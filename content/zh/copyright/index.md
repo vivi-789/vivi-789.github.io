@@ -69,7 +69,7 @@ hidemeta: true
 
 ## 六、联系方式
 
-- 邮箱：your-email@example.com
+- 邮箱：xinruyuan@gmail.com
 - GitHub：[@vivi-789](https://github.com/vivi-789)
 
 ---
