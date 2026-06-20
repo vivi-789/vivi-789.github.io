@@ -1,6 +1,7 @@
 baseURL: "https://vivi-789.github.io"
 languageCode: "en-us"
 title: "Vivi's Journal"
+copyright: "© 2026 Vivi's Journal · 本站原创文章未经书面授权禁止商业转载；非商业转载请注明作者与原文链接。"
 theme: "PaperMod"
 
 # 多语言配置
@@ -59,6 +60,12 @@ languages:
         - name: "搜索"
           url: "/zh/search/"
           weight: 9
+        - name: "免责声明"
+          url: "/zh/disclaimer/"
+          weight: 10
+        - name: "版权"
+          url: "/zh/copyright/"
+          weight: 11
 
 # PaperMod 主题参数
 params:

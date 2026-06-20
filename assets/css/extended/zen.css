@@ -395,6 +395,24 @@ body::before {
   border-radius: 999px;
 }
 
+.post-legal {
+  margin-top: 2.6rem;
+  padding-top: 1.6rem;
+  border-top: 1px dashed var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+.post-legal p {
+  margin: 0 0 0.6rem;
+}
+
+.post-legal a {
+  color: var(--brand-primary);
+  border-bottom: 1px solid color-mix(in srgb, var(--brand-primary) 40%, transparent);
+}
+
 .fade-in {
   animation: fadeIn 320ms ease both;
 }
