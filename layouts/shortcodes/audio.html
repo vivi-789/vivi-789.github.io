@@ -1,0 +1,17 @@
+{{- /*
+  音频播放器 shortcode
+  用法：{{< audio src="/media/your-audio.mp3" >}}
+  可选参数：
+    title - 音频标题（显示在播放器上方）
+    type  - 音频类型，默认 audio/mpeg；其他常见值：audio/wav, audio/ogg, audio/mp4
+*/ -}}
+{{- $src := .Get "src" -}}
+{{- $title := .Get "title" -}}
+{{- $type := .Get "type" | default "audio/mpeg" -}}
+<figure class="post-audio" style="margin: 1.5em 0;">
+  {{ with $title }}<figcaption style="margin-bottom: 0.5em; font-size: 0.9em; color: var(--secondary);">🎵 {{ . }}</figcaption>{{ end }}
+  <audio controls preload="metadata" style="width: 100%;">
+    <source src="{{ $src }}" type="{{ $type }}">
+    您的浏览器不支持音频播放。<a href="{{ $src }}">下载音频</a>
+  </audio>
+</figure>

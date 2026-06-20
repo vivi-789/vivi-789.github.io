@@ -51,6 +51,7 @@ languages:
           url: "/zh/categories/books/"
           weight: 5
         - name: "AI Native"
+          identifier: "ai-native-category"
           url: "/zh/categories/ai-native/"
           weight: 6
         - name: "关于"
@@ -137,6 +138,12 @@ permalinks:
 taxonomies:
   tag: "tags"
   category: "categories"
+
+# 安全策略：允许 HTML 内容文件（默认禁止；覆盖时需要列出所有要允许的 MIME 类型）
+security:
+  allowContent:
+    - '^text/markdown$'
+    - '^text/html$'
 
 # Markdown 渲染设置
 markup:

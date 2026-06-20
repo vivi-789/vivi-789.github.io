@@ -1,0 +1,24 @@
+{{- /*
+  视频播放器 shortcode
+  用法：{{< video src="/media/your-video.mp4" >}}
+  可选参数：
+    poster   - 视频封面图，例：poster="/media/cover.jpg"
+    width    - 宽度，默认 100%
+    autoplay - 设为 "true" 自动播放（注意：浏览器策略通常需要静音才允许自动播放）
+*/ -}}
+{{- $src := .Get "src" -}}
+{{- $poster := .Get "poster" -}}
+{{- $width := .Get "width" | default "100%" -}}
+{{- $autoplay := eq (.Get "autoplay") "true" -}}
+<figure class="post-video" style="margin: 1.5em 0;">
+  <video
+    controls
+    preload="metadata"
+    playsinline
+    style="width: {{ $width }}; height: auto; max-width: 100%; border-radius: 6px;"
+    {{ with $poster }}poster="{{ . }}"{{ end }}
+    {{ if $autoplay }}autoplay muted{{ end }}>
+    <source src="{{ $src }}" type="video/mp4">
+    您的浏览器不支持视频播放。<a href="{{ $src }}">下载视频</a>
+  </video>
+</figure>
