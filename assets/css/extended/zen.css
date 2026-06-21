@@ -265,6 +265,9 @@ body::before {
   font-family: var(--serif);
   font-size: 1.12rem;
   line-height: 1.38;
+  letter-spacing: 0.01em;
+  text-align: justify;
+  text-justify: inter-character;
   transition: color 200ms ease;
 }
 
@@ -272,16 +275,30 @@ body::before {
   color: var(--brand-primary);
 }
 
+/* Recent Notes：元信息紧贴标题、条目之间拉开 */
+.zen-article-list li .zen-meta {
+  margin-top: 0.15rem;
+  margin-bottom: 0.75rem;
+}
+.zen-article-list li:last-child .zen-meta {
+  margin-bottom: 0;
+}
+
 .zen-categories {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
   margin: 0 0 56px;
+  align-items: stretch;
 }
 
+/* 分类卡片：内部 flex 列布局 + 上下推开，保证 4 张卡片视觉对齐 */
 .zen-category-card {
   padding: 1.4rem;
-  min-height: 150px;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .zen-category-card h2 {
