@@ -1,0 +1,30 @@
+# macOS 系统垃圾
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows 系统垃圾
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Hugo 构建产物（每次本地构建生成，不应提交）
+public/
+resources/
+.hugo_build.lock
+
+# Node modules（如果以后用 npm 装 Hugo 模块）
+node_modules/
+
+# 编辑器和 IDE 临时文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 备份和临时文件
+*.bak
+*.tmp
+*.log
