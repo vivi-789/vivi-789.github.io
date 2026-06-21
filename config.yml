@@ -63,12 +63,9 @@ languages:
         - name: "搜索"
           url: "/zh/search/"
           weight: 9
-        - name: "免责声明"
-          url: "/zh/disclaimer/"
+        - name: "免责声明与版权"
+          url: "/zh/legal/"
           weight: 10
-        - name: "版权"
-          url: "/zh/copyright/"
-          weight: 11
 
 # PaperMod 主题参数
 params:
