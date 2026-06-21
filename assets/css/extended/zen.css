@@ -183,7 +183,7 @@ body::before {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
 }
 
 .zen-featured h1,
@@ -197,16 +197,20 @@ body::before {
   line-height: 1.18;
 }
 
+/* 首页置顶大卡片标题：精致紧凑（约定字号 = 1.65rem / ~26.4px） */
 .zen-featured h1,
 .zen-featured h2 {
-  font-size: clamp(2.4rem, 6vw, 4.8rem);
-  margin: 0 0 1.2rem;
+  font-size: 1.65rem;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
 }
 
 .zen-excerpt {
-  color: var(--text-secondary);
-  font-size: 1.03rem;
-  line-height: 1.85;
+  color: #444443;
+  font-size: 15.5px;
+  line-height: 1.6;
   max-width: 56ch;
   margin-bottom: 1.6rem;
 }
@@ -414,8 +418,6 @@ body::before {
 @media (max-width: 560px) {
   .logo a { font-size: 1.08rem; }
   .zen-categories { grid-template-columns: 1fr; }
-  .zen-featured h1,
-  .zen-featured h2 { font-size: 2.35rem; }
 }
 
 /* ---------------------------------------------------- */
