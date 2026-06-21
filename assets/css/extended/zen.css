@@ -386,6 +386,15 @@ body::before {
   border-radius: 18px;
   box-shadow: var(--zen-shadow);
   margin: 1.5rem auto 2rem;
+  display: block;
+  max-width: 60%;
+  height: auto;
+}
+
+@media (max-width: 720px) {
+  .post-content img {
+    max-width: 90%;
+  }
 }
 
 .post-tags a {
@@ -492,4 +501,50 @@ body::before {
 /* 任务列表：保留原复选框样式，仅去掉缩进里的项目符号占位 */
 .post-content li:has(> input[type="checkbox"]) {
   list-style-type: none;
+}
+
+/* ---------------------------------------------------- */
+/* 分类页文章序号                                       */
+/* ---------------------------------------------------- */
+
+.zen-numbered {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.5rem;
+}
+
+.zen-numbered > li {
+  position: relative;
+  padding-left: 3.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.zen-numbered .zen-num {
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  font-family: var(--serif, Georgia, serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--brand-secondary);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.zen-numbered > li > a {
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--brand-primary);
+}
+
+.zen-numbered > li > a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.zen-numbered .zen-meta {
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
 }

@@ -9,7 +9,7 @@
       <div class="zen-eyebrow">Latest Essay</div>
       <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
       <p class="zen-excerpt">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | htmlUnescape | truncate 180 }}{{ end }}</p>
-      <div class="zen-meta">{{ .Date.Format "2006年1月2日" }} · {{ .ReadingTime }} min read · {{ .WordCount }} Words</div>
+      <div class="zen-meta">{{ .ReadingTime }} min read · {{ .WordCount }} Words</div>
       <a class="zen-read-link" href="{{ .Permalink }}">Read the essay →</a>
     </article>
     {{- end }}
@@ -20,7 +20,7 @@
         {{- range first 5 (after 1 $pages) }}
         <li>
           <a href="{{ .Permalink }}">{{ .Title }}</a>
-          <div class="zen-meta">{{ .Date.Format "2006年1月2日" }} · {{ .ReadingTime }} min · {{ .WordCount }} Words</div>
+          <div class="zen-meta">{{ .ReadingTime }} min · {{ .WordCount }} Words</div>
         </li>
         {{- end }}
       </ol>
@@ -58,12 +58,15 @@
   {{- end }}
 
   {{- $pages := union .RegularPages .Sections }}
-  {{- $paginator := .Paginate $pages }}
-  <ol class="zen-article-list fade-in">
-    {{- range $paginator.Pages }}
+  {{- /* 反转分页前的源列表：让最早发布的拿到 01 序号（分类内正序） */}}
+  {{- $sorted := sort $pages "Date" "asc" }}
+  {{- $paginator := .Paginate $sorted }}
+  <ol class="zen-article-list zen-numbered fade-in">
+    {{- range $i, $p := $paginator.Pages }}
     <li>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-      <div class="zen-meta">{{ .Date.Format "2006年1月2日" }} · {{ .ReadingTime }} min read · {{ .WordCount }} Words</div>
+      <span class="zen-num">{{ printf "%02d" (add $i 1) }}</span>
+      <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
+      <div class="zen-meta">{{ $p.ReadingTime }} min read · {{ $p.WordCount }} Words</div>
     </li>
     {{- end }}
   </ol>

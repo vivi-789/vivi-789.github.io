@@ -7,7 +7,7 @@
     <div class="post-description">{{ .Description }}</div>
     {{- end }}
     <div class="post-meta">
-      Published on {{ .Date.Format "2006年1月2日" }} · {{ .ReadingTime }} min read · {{ .WordCount }} Words
+      {{ .ReadingTime }} min read · {{ .WordCount }} Words
       {{- partial "translation_list.html" . -}}
     </div>
   </header>
