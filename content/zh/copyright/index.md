@@ -37,7 +37,7 @@ hidemeta: true
 > ```
 > 作者：vivi-789
 > 原文：https://vivi-789.github.io/<原文链接>
-> 来源：Vivi's Journal
+> 来源：vivi的学习空间
 > ```
 
 ---

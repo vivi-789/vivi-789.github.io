@@ -1,7 +1,7 @@
 baseURL: "https://vivi-789.github.io"
 languageCode: "en-us"
-title: "Vivi's Journal"
-copyright: "© 2026 Vivi's Journal · 本站原创文章未经书面授权禁止商业转载；非商业转载请注明作者与原文链接。"
+title: "vivi的学习空间"
+copyright: "© 2026 vivi的学习空间 · 本站原创文章未经书面授权禁止商业转载；非商业转载请注明作者与原文链接。"
 theme: "PaperMod"
 defaultContentLanguage: "zh"
 defaultContentLanguageInSubdir: true
@@ -73,7 +73,7 @@ languages:
 # PaperMod 主题参数
 params:
   env: production
-  title: "Vivi's Journal"
+  title: "vivi的学习空间"
   description: "Essays on management, travel, books, and AI native thinking"
   keywords: [Blog, Knowledge Base, Hugo, PaperMod]
   author: "vivi-789"
