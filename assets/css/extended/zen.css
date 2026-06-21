@@ -302,9 +302,22 @@ body::before {
   text-align: left;
 }
 
+/* 文章主标题：精致紧凑（每篇文章主题字号统一约定 = 1.8rem / ~28.8px）
+   桌面与移动端共用同一字号，无 clamp 缩放，确保各文章视觉一致 */
 .post-title {
-  font-size: clamp(2.35rem, 7vw, 4.6rem);
-  margin-bottom: 1.2rem;
+  font-family: var(--serif) !important;
+  font-size: 1.8rem !important;
+  line-height: 1.35 !important;
+  color: var(--brand-primary) !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 1.2rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* 面包屑与标题之间收紧 */
+.breadcrumbs {
+  margin-bottom: 0.5rem !important;
 }
 
 .post-description {
@@ -401,7 +414,6 @@ body::before {
 @media (max-width: 560px) {
   .logo a { font-size: 1.08rem; }
   .zen-categories { grid-template-columns: 1fr; }
-  .post-title { font-size: 2.25rem; }
   .zen-featured h1,
   .zen-featured h2 { font-size: 2.35rem; }
 }
