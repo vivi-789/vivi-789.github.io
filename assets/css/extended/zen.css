@@ -440,3 +440,56 @@ body::before {
   .zen-featured h1,
   .zen-featured h2 { font-size: 2.35rem; }
 }
+
+/* ---------------------------------------------------- */
+/* 列表样式：知性纸质书的精致感                          */
+/* ---------------------------------------------------- */
+
+/* 文章正文里的一级 ul：自定义绿色项目符号 */
+.post-content > ul,
+.post-content > * > ul {
+  list-style-type: none;
+  padding-left: 1.25rem;
+}
+
+.post-content > ul > li,
+.post-content > * > ul > li {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+/* 排除任务列表项（含 <input type="checkbox">），它们有自己的复选框 */
+.post-content > ul > li:not(:has(> input[type="checkbox"]))::before,
+.post-content > * > ul > li:not(:has(> input[type="checkbox"]))::before {
+  content: "•";
+  color: var(--brand-secondary);
+  font-weight: bold;
+  position: absolute;
+  left: -1rem;
+}
+
+/* 嵌套的二级 ul：用短横线区分层级 */
+.post-content ul ul {
+  list-style-type: none;
+  padding-left: 1.25rem;
+  margin-top: 0.4rem;
+}
+
+.post-content ul ul > li {
+  position: relative;
+  margin-bottom: 0.35rem;
+}
+
+.post-content ul ul > li:not(:has(> input[type="checkbox"]))::before {
+  content: "–";
+  color: var(--brand-secondary);
+  opacity: 0.65;
+  font-weight: normal;
+  position: absolute;
+  left: -1rem;
+}
+
+/* 任务列表：保留原复选框样式，仅去掉缩进里的项目符号占位 */
+.post-content li:has(> input[type="checkbox"]) {
+  list-style-type: none;
+}
