@@ -16,7 +16,6 @@
   {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
 
   <section class="zen-tldr" aria-label="TL;DR">
-    <div class="zen-tldr-title">TL;DR</div>
     <ul>
       {{- with .Params.tldr }}
         {{- range . }}<li>{{ . }}</li>{{- end }}

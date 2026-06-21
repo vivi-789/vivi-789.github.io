@@ -8,7 +8,6 @@ categories: ["management"]
 description: "从新任管理者视角复盘授权、检查点、资源支持与团队情绪管理的常见误区。"
 ---
 
-> 声明：本文为通用职场经验与管理方法论分享，不针对任何具体公司、组织或个人；文中案例如无特别说明，均为经过抽象化处理的示例，仅供参考。
 
 ![配图](/media/management/17_high_potential_cover_new.png)
 

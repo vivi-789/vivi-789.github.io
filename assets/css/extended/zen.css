@@ -316,70 +316,26 @@ body::before {
 
 .post-content {
   color: var(--text-primary);
-  font-size: 18px;
-  line-height: 1.8;
   letter-spacing: 0.02em;
-}
-
-.post-content p,
-.post-content ul,
-.post-content ol {
-  margin-bottom: 1.75rem;
 }
 
 .post-content h2,
 .post-content h3,
 .post-content h4 {
   font-family: var(--serif);
-  color: var(--brand-primary);
   line-height: 1.28;
-  margin: 3.1rem 0 1.2rem;
 }
 
-.post-content h2 {
-  font-size: 2rem;
-}
-
-.post-content h3 {
-  font-size: 1.45rem;
-}
-
-.post-content blockquote,
-.zen-tldr {
+.post-content blockquote {
   background: color-mix(in srgb, var(--bg-secondary) 92%, transparent);
   border-left: 3px solid var(--brand-secondary);
   border-radius: 0 14px 14px 0;
   color: var(--text-primary);
   margin: 2.2rem 0;
   padding: 1.2rem 1.35rem;
-}
-
-.post-content blockquote {
   font-family: var(--serif);
   font-style: italic;
   font-size: 1.08rem;
-}
-
-.zen-tldr {
-  border-left-color: var(--brand-primary);
-  font-size: 0.98rem;
-}
-
-.zen-tldr-title {
-  color: var(--brand-primary);
-  font-family: var(--serif);
-  font-size: 1.08rem;
-  font-weight: 700;
-  margin-bottom: 0.6rem;
-}
-
-.zen-tldr ul {
-  margin: 0 0 0 1.1rem;
-  padding: 0;
-}
-
-.zen-tldr li {
-  margin: 0.35rem 0;
 }
 
 .post-content img {
@@ -451,56 +407,15 @@ body::before {
 }
 
 /* ---------------------------------------------------- */
-/* 列表样式：知性纸质书的精致感                          */
+/* 任务列表保留原复选框                                 */
 /* ---------------------------------------------------- */
 
-/* 文章正文里的一级 ul：自定义绿色项目符号 */
-.post-content > ul,
-.post-content > * > ul {
-  list-style-type: none;
-  padding-left: 1.25rem;
-}
-
-.post-content > ul > li,
-.post-content > * > ul > li {
-  position: relative;
-  margin-bottom: 0.5rem;
-}
-
-/* 排除任务列表项（含 <input type="checkbox">），它们有自己的复选框 */
-.post-content > ul > li:not(:has(> input[type="checkbox"]))::before,
-.post-content > * > ul > li:not(:has(> input[type="checkbox"]))::before {
-  content: "•";
-  color: var(--brand-secondary);
-  font-weight: bold;
-  position: absolute;
-  left: -1rem;
-}
-
-/* 嵌套的二级 ul：用短横线区分层级 */
-.post-content ul ul {
-  list-style-type: none;
-  padding-left: 1.25rem;
-  margin-top: 0.4rem;
-}
-
-.post-content ul ul > li {
-  position: relative;
-  margin-bottom: 0.35rem;
-}
-
-.post-content ul ul > li:not(:has(> input[type="checkbox"]))::before {
-  content: "–";
-  color: var(--brand-secondary);
-  opacity: 0.65;
-  font-weight: normal;
-  position: absolute;
-  left: -1rem;
-}
-
-/* 任务列表：保留原复选框样式，仅去掉缩进里的项目符号占位 */
 .post-content li:has(> input[type="checkbox"]) {
   list-style-type: none;
+}
+
+.post-content li:has(> input[type="checkbox"])::before {
+  content: none !important;
 }
 
 /* ---------------------------------------------------- */
@@ -547,4 +462,124 @@ body::before {
   margin-top: 0.3rem;
   font-size: 0.85rem;
   opacity: 0.7;
+}
+
+/* ==========================================================================
+   知性书斋风格 - 深度阅读排版微调 v2
+   ========================================================================== */
+
+/* 彻底消除首屏重复：隐藏多余导语 */
+.post-header .post-description {
+    display: none !important;
+}
+
+/* 正文容器：锁死黄金阅读宽度与字块两端对齐 */
+.post-content.md-content, .post-content {
+    max-width: 650px !important;
+    margin: 0 auto;
+    text-align: justify;
+    text-justify: inter-character;
+    font-size: 16.5px !important;
+    line-height: 1.65 !important;
+}
+
+/* 正文段落：进一步收紧间距，提升信息密度，消除冗长感 */
+.post-content p {
+    margin-top: 0 !important;
+    margin-bottom: 1.05rem !important;
+}
+
+/* 主旨声明块样式打磨 */
+.post-content > blockquote:first-of-type {
+    border-left: 3px solid #1C355E !important;
+    background-color: #F9F6F0 !important;
+    padding: 1.1rem 1.25rem !important;
+    margin: 0 0 2rem 0 !important;
+    border-radius: 4px;
+}
+.post-content > blockquote:first-of-type p {
+    font-size: 1.05rem !important;
+    color: #2C2C2C !important;
+    font-weight: 500;
+    margin: 0 !important;
+}
+
+/* 隐去标题后的极简摘要框组件 */
+.zen-tldr {
+    background-color: #F9F6F0 !important;
+    border-left: 4px solid #1C355E !important;
+    padding: 1.25rem 1.5rem !important;
+    margin-bottom: 2rem !important;
+    border-radius: 0 6px 6px 0;
+}
+.zen-tldr ul {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
+}
+.zen-tldr ul li {
+    position: relative;
+    padding-left: 1.25rem !important;
+    margin-bottom: 0.5rem !important;
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    color: #4A4A4A !important;
+}
+.zen-tldr ul li:last-child {
+    margin-bottom: 0 !important;
+}
+.zen-tldr ul li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #1C355E;
+    font-weight: bold;
+}
+
+/* 大标题纵向呼吸感微调 */
+.post-content h2 {
+    font-family: ui-serif, Georgia, "Noto Serif SC", serif !important;
+    font-size: 1.5rem !important;
+    color: #1C355E !important;
+    margin-top: 2.5rem !important;
+    margin-bottom: 1rem !important;
+    padding-bottom: 0.4rem !important;
+    border-bottom: 1px solid #E2DDD5 !important;
+}
+
+/* 二级标题转换成内敛黛绿色 */
+.post-content h3 {
+    font-family: ui-serif, Georgia, "Noto Serif SC", serif !important;
+    font-size: 1.25rem !important;
+    color: #2E4A3F !important;
+    margin-top: 1.75rem !important;
+    margin-bottom: 0.75rem !important;
+}
+
+/* 正文列表间距收紧与自定义符号 */
+.post-content ul {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 1.25rem !important;
+}
+.post-content ul li {
+    position: relative;
+    padding-left: 1.25rem !important;
+    margin-bottom: 0.4rem !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+}
+.post-content ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0.2rem;
+    color: #2E4A3F;
+    font-weight: bold;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #E2DDD5 !important;
+    margin: 2rem 0 !important;
 }

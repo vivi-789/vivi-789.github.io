@@ -8,7 +8,6 @@ categories: ["management"]
 description: "系统梳理向上管理的本质、高频场景、沟通雷区与实用表达框架。"
 ---
 
-> 声明：本文为通用职场经验与管理方法论分享，不针对任何具体公司、组织或个人；文中案例如无特别说明，均为经过抽象化处理的示例，仅供参考。
 
 ![封面：向上管理不是拍马屁](/media/management/05_upward_mgmt_cover.png)
 
