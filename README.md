@@ -249,9 +249,139 @@ hugo server -D
 
 ## 备份与安全
 
+### 三层安全网
+
+| 层级 | 在哪里 | 误操作恢复能力 |
+|------|--------|--------------|
+| **第 1 层：Git 历史** | `.git/` 目录（本地） | 任何被 commit 过的文件都能恢复 |
+| **第 2 层：GitHub 远程仓库** | `github.com/vivi-789/vivi-789.github.io` | 本地全删 → `git clone` 完整恢复 |
+| **第 3 层：Time Machine**（建议开启） | macOS 系统备份 | 系统级兜底，包括未提交的修改 |
+
+> **关键认知**：只要 `git push` 推过，本地误删 = 0 损失。
+
+---
+
+### 文件夹分类（按"误删后的影响等级"排）
+
+| 等级 | 文件夹/文件 | 误删后果 | 恢复方式 |
+|------|----------|---------|--------|
+| 🔴 **绝不可删** | `.git/` | 丢失所有本地版本历史 | 重新 `git clone`（但本地未推送的修改全没了）|
+| 🔴 **绝不可删** | `content/` | 所有文章丢失 | `git checkout HEAD -- content/` 或 `git clone` |
+| 🔴 **绝不可删** | `config.yml` | 网站配置丢失 | 同上 |
+| 🟡 **小心** | `static/media/` | 图片源文件丢失 | 已推送 → `git clone` 恢复 |
+| 🟡 **小心** | `archetypes/`、`layouts/` | 模板和样式丢失 | 同上 |
+| 🟢 **可删（自动重建）** | `public/` | Hugo 构建产物 | `hugo` 命令重新生成 |
+| 🟢 **可删（自动重建）** | `resources/` | Hugo 缓存 | 下次构建自动生成 |
+| 🟢 **可删（自动重建）** | `.hugo_build.lock` | Hugo 锁文件 | 下次构建自动生成 |
+| 🟢 **可删（不影响）** | `.DS_Store`（多处）| macOS 缓存 | 系统自动重建 |
+| ⚪ **第三方** | `themes/PaperMod/` | 主题文件 | `git clone` 恢复 |
+
+---
+
+### 日常防误删习惯（最重要）
+
+#### ⭐⭐⭐ "三连命令"习惯（每次写完文章都执行）
+
+```bash
+cd ~/my-knowledge-base
+git add .
+git commit -m "新文章：XXX"
+git push
+```
+
+> 推送之后即使删掉整个本地文件夹，也能 5 分钟内完全恢复。
+
+#### ⭐⭐⭐ 危险操作前先查状态
+
+执行任何带 `rm`、`delete`、`reset --hard` 的命令前，先看一眼：
+
+```bash
+git status        # 看哪些文件是脏的
+git log --oneline -5   # 看最近 5 个提交
+```
+
+#### ⭐⭐ 大重构前手动备份
+
+```bash
+cp -r ~/my-knowledge-base ~/my-knowledge-base.bak.2026-06-21
+# 操作完没问题再删掉备份
+```
+
+---
+
+### 急救手册（按场景查）
+
+#### 场景 1：误删了一篇文章
+
+```bash
+# 查找最后一次该文件还存在的 commit
+git log --all --full-history -- content/zh/posts/某文章.md
+
+# 恢复到工作区
+git checkout HEAD -- content/zh/posts/某文章.md
+```
+
+#### 场景 2：误改了文章但还没 commit
+
+```bash
+git checkout -- content/zh/posts/某文章.md   # 恢复到上次 commit 的状态
+```
+
+#### 场景 3：误删了整个 content/ 目录
+
+```bash
+git checkout HEAD -- content/
+```
+
+#### 场景 4：误删了整个项目文件夹
+
+```bash
+cd ~
+git clone git@github.com:vivi-789/vivi-789.github.io.git my-knowledge-base
+# 全部内容回来（除了未推送的本地修改）
+```
+
+#### 场景 5：`git push --force` 把远程也搞坏了
+
+```bash
+# 在本地仓库
+git reflog                    # 看所有操作历史（按时间倒序）
+git reset --hard HEAD@{5}     # 回退到某个状态（数字替换为合适的）
+git push --force-with-lease   # 推回去
+```
+
+#### 场景 6：彻底搞砸了，想从某个时间点重来
+
+```bash
+git log --oneline              # 找到目标时间点的 commit hash（如 abc1234）
+git reset --hard abc1234       # 强制回退（⚠️ 会丢失所有未提交的修改）
+```
+
+#### 场景 7：本地 `.git/` 损坏（极少见）
+
+```bash
+cd ~
+mv my-knowledge-base my-knowledge-base.broken    # 先重命名而不是删除
+git clone git@github.com:vivi-789/vivi-789.github.io.git my-knowledge-base
+# 如果 .broken 里有未推送的修改，手动复制相关文件过去
+rm -rf my-knowledge-base.broken
+```
+
+---
+
+### 命名建议
+
+- ✅ **用英文/拼音 slug 作文件名**：`fanxiang-lvxing.html`
+- ❌ **不要用中文文件名**：URL 会变成 `%E4%BD%A0%E5%A5%BD...` 乱码
+- ✅ **同主题前缀分组**：`ai-native-organization.md`、`ai-native-meeting.md` 排序时自动聚在一起
+
+---
+
+### 其他
+
 - **Git 历史不可篡改**：每次提交都有唯一哈希，无法被悄悄修改
-- **双重备份**：GitHub 远程仓库 + 本地仓库
 - **免费**：除可选域名外，零费用
+
 
 ---
 
