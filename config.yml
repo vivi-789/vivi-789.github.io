@@ -57,12 +57,9 @@ languages:
         - name: "关于"
           url: "/zh/about/"
           weight: 7
-        - name: "标签"
-          url: "/zh/tags/"
-          weight: 8
         - name: "搜索"
           url: "/zh/search/"
-          weight: 9
+          weight: 8
         - name: "免责声明与版权"
           url: "/zh/legal/"
           weight: 10
