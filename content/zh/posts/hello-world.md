@@ -22,8 +22,8 @@ description: "欢迎来到你的新知识库！"
 **加粗文字**：`**加粗**`
 
 *斜体文字*：`*斜体*`
-
-[链接](https://example.com)：`[链接](https://example.com)`
+：`
+`
 
 > 引用：在行首使用 `>`
 
@@ -39,7 +39,6 @@ print("你好，世界！")
 将图片放入 `static/media/` 文件夹，然后像这样引用：
 
 ```markdown
-![图片描述](/media/your-image.png)
 ```
 
 或者使用 Obsidian 的拖拽功能 —— 图片路径会自动处理。
