@@ -517,28 +517,28 @@ body::before {
 /* 正文段落：进一步收紧间距，提升信息密度，消除冗长感 */
 .post-content p {
     margin-top: 0 !important;
-    margin-bottom: 1.05rem !important;
+    margin-bottom: 0.9rem !important;
 }
 
 /* 主旨声明块样式打磨 */
 .post-content > blockquote:first-of-type {
-    border-left: 3px solid #1C355E !important;
-    background-color: #F9F6F0 !important;
+    border-left: 3px solid var(--brand-primary) !important;
+    background-color: var(--bg-secondary) !important;
     padding: 1.1rem 1.25rem !important;
     margin: 0 0 2rem 0 !important;
     border-radius: 4px;
 }
 .post-content > blockquote:first-of-type p {
     font-size: 1.05rem !important;
-    color: #2C2C2C !important;
+    color: var(--text-primary) !important;
     font-weight: 500;
     margin: 0 !important;
 }
 
 /* 隐去标题后的极简摘要框组件 */
 .zen-tldr {
-    background-color: #F9F6F0 !important;
-    border-left: 4px solid #1C355E !important;
+    background-color: var(--bg-secondary) !important;
+    border-left: 4px solid var(--brand-primary) !important;
     padding: 1.25rem 1.5rem !important;
     margin-bottom: 2rem !important;
     border-radius: 0 6px 6px 0;
@@ -554,7 +554,7 @@ body::before {
     margin-bottom: 0.5rem !important;
     font-size: 0.95rem !important;
     line-height: 1.5 !important;
-    color: #4A4A4A !important;
+    color: var(--text-secondary) !important;
 }
 .zen-tldr ul li:last-child {
     margin-bottom: 0 !important;
@@ -563,54 +563,64 @@ body::before {
     content: "—";
     position: absolute;
     left: 0;
-    color: #1C355E;
+    color: var(--brand-primary);
     font-weight: bold;
 }
 
 /* 大标题纵向呼吸感微调 */
 .post-content h2 {
-    font-family: ui-serif, Georgia, "Noto Serif SC", serif !important;
-    font-size: 1.5rem !important;
-    color: #1C355E !important;
+    font-family: var(--serif) !important;
+    font-size: 1.45rem !important;
+    color: var(--brand-primary) !important;
     margin-top: 2.5rem !important;
     margin-bottom: 1rem !important;
     padding-bottom: 0.4rem !important;
-    border-bottom: 1px solid #E2DDD5 !important;
+    border-left: none !important;
+    border-bottom: 1px solid var(--border-color) !important;
 }
 
 /* 二级标题转换成内敛黛绿色 */
 .post-content h3 {
-    font-family: ui-serif, Georgia, "Noto Serif SC", serif !important;
+    font-family: var(--serif) !important;
     font-size: 1.25rem !important;
-    color: #2E4A3F !important;
+    color: var(--brand-secondary) !important;
     margin-top: 1.75rem !important;
     margin-bottom: 0.75rem !important;
 }
 
-/* 正文列表间距收紧与自定义符号 */
-.post-content ul {
-    list-style-type: none !important;
-    padding-left: 0 !important;
-    margin-top: 0 !important;
+/* 正文列表间距收紧与自定义符号（仅作用于一级列表，嵌套恢复默认） */
+.post-content > ul,
+.post-content > blockquote > ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
     margin-bottom: 1.25rem !important;
 }
-.post-content ul li {
+.post-content > ul > li,
+.post-content > blockquote > ul > li {
     position: relative;
     padding-left: 1.25rem !important;
     margin-bottom: 0.4rem !important;
-    font-size: 16px !important;
+    font-size: 16px;
     line-height: 1.6 !important;
 }
-.post-content ul li::before {
+.post-content > ul > li::before,
+.post-content > blockquote > ul > li::before {
     content: "•";
     position: absolute;
     left: 0.2rem;
-    color: #2E4A3F;
+    color: var(--brand-secondary);
     font-weight: bold;
+}
+
+/* 嵌套列表恢复默认浏览器样式 */
+.post-content ul ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
 }
 
 hr {
     border: 0;
-    border-top: 1px solid #E2DDD5 !important;
+    border-top: 1px solid var(--border-color) !important;
     margin: 2rem 0 !important;
 }
