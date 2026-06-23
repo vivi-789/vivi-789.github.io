@@ -6,8 +6,9 @@
     {{- if .Description }}
     <div class="post-description">{{ .Description }}</div>
     {{- end }}
+    {{- $stats := partial "chinese_stats.html" . -}}
     <div class="post-meta">
-      {{ .ReadingTime }} min read · {{ .WordCount }} Words
+      {{ $stats.readingTime }} min read · {{ $stats.charCount }} 字
       {{- partial "translation_list.html" . -}}
     </div>
   </header>

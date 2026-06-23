@@ -1,0 +1,10 @@
+{{/*
+  中文文章统计：基于字符数计算字数和阅读时间
+  Hugo 默认 WordCount / ReadingTime 对中文（无空格分词）不准确
+  用法：{{ $stats := partial "chinese_stats.html" . }}
+        {{ $stats.readingTime }} min · {{ $stats.charCount }} 字
+*/}}
+{{- $plain := .Plain -}}
+{{- $charCount := countrunes $plain -}}
+{{- $readingTime := math.Max 1 (div (add $charCount 499) 500) -}}
+{{- return dict "charCount" $charCount "readingTime" $readingTime -}}
