@@ -4,7 +4,7 @@ slug: "ai-native-organization"
 date: 2026-06-20T15:00:00+08:00
 draft: false
 tags: ["AI Native", "组织重构", "互联网职场", "管理者", "人工智能", "组织变革", "知识管理", "绩效管理"]
-categories: ["ai-native"]
+categories: ["AI Native"]
 description: "本文面向互联网行业职场人，指出 AI Native 不是工具升级，而是组织重构。文章从管理视角分析 AI 对工作系统、知识系统、决策系统、绩效系统和人才系统的影响，并提出管理者与个人在 AI Native 时代的能力转型方向。"
 ---
 

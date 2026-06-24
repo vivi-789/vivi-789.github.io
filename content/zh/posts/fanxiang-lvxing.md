@@ -3,7 +3,7 @@ title: "反向旅行：互联网人最爱的冷门神仙地"
 date: 2026-06-22T10:00:00+08:00
 draft: false
 tags: ["旅游", "反向旅行", "冷门目的地"]
-categories: ["travel"]
+categories: ["旅游类"]
 description: "热门景区排队三小时玩半小时？反向旅行让冷门小城每天都是新发现。"
 slug: "fanxiang-lvxing"
 ---

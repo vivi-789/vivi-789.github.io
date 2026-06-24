@@ -4,7 +4,7 @@ slug: "chuangxin-zhe-de-jingjing"
 date: 2026-06-24T12:00:00+08:00
 draft: false
 tags: ["破坏性创新", "AI时代管理", "组织惯性", "价值网络", "资源分配", "读书笔记"]
-categories: ["books"]
+categories: ["书籍类"]
 description: "这不是一本教你如何创新的鸡血书，而是一本提醒管理者：你越专业、越听客户、越追求利润，越可能亲手把未来拒之门外的清醒剂。"
 ---
 

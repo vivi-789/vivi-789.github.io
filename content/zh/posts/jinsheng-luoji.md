@@ -4,7 +4,7 @@ slug: "jinsheng-luoji"
 date: 2026-06-19T20:40:00+08:00
 draft: false
 tags: ["管理", "晋升", "职场成长", "向上管理"]
-categories: ["management"]
+categories: ["管理类"]
 description: "从明规则、能见度、信任背书和超纲行动四个角度，拆解职场晋升的底层逻辑。"
 ---
 
