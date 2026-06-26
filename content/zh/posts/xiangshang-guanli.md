@@ -4,7 +4,7 @@ slug: "xiangshang-guanli"
 date: 2026-06-19T20:30:00+08:00
 draft: false
 tags: ["管理", "向上管理", "沟通", "职场"]
-categories: ["管理类"]
+categories: ["management"]
 description: "系统梳理向上管理的本质、高频场景、沟通雷区与实用表达框架。"
 ---
 

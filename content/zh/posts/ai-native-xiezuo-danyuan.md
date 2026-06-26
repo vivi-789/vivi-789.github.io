@@ -4,7 +4,7 @@ slug: "ai-native-xiezuo-danyuan"
 date: 2026-06-24T10:00:00+08:00
 draft: false
 tags: ["AI Native", "组织形态", "人机协作", "岗位重塑", "未来组织"]
-categories: ["AI Native"]
+categories: ["ai-native"]
 description: "当智能体成为\"团队成员\"，传统岗位的边界正在融化。理解这件事，比抢着学某个工具更重要。"
 ---
 

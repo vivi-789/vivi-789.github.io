@@ -4,7 +4,7 @@ slug: "feijishuren-guanhao-zhinengti"
 date: 2026-06-26T10:00:00+08:00
 draft: false
 tags: ["平民化 AI", "智能体协作", "非技术人提效", "工作流治理", "AI Native"]
-categories: ["AI Native"]
+categories: ["ai-native"]
 description: "智能体真正进入日常工作后，重点不只是“会不会用”，而是如何像管理一名新同事一样，把目标、边界、反馈和复盘机制讲清楚。"
 ---
 

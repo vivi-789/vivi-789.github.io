@@ -4,7 +4,7 @@ slug: "zhanlue-luodi"
 date: 2026-06-23T10:00:00+08:00
 draft: false
 tags: ["管理", "战略落地", "组织发展", "团队管理", "跨团队协同"]
-categories: ["管理类"]
+categories: ["management"]
 description: "战略落地的关键，往往在组织翻译与排兵布阵。"
 ---
 
