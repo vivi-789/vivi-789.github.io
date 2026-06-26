@@ -1,5 +1,5 @@
 ---
-title: "《创新者的窘境》：好管理也会制造盲区"
+title: "今日好书推荐：《创新者的窘境》"
 slug: "chuangxin-zhe-de-jingjing"
 date: 2026-06-24T12:00:00+08:00
 draft: false
