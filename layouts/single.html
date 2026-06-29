@@ -28,7 +28,7 @@
     </ul>
   </section>
 
-  {{- if (.Param "ShowToc") }}{{- partial "toc.html" . }}{{- end }}
+  {{- if not (.Param "disableToc") }}{{- partial "toc.html" . }}{{- end }}
 
   {{- if .Content }}
   <div class="post-content md-content">
@@ -46,6 +46,12 @@
       {{- end }}
     </ul>
     {{- if (.Param "ShowPostNavLinks") }}{{- partial "post_nav_links.html" . }}{{- end }}
+
+    {{- partial "related_posts.html" . -}}
+
+    <aside class="post-subscribe" aria-label="订阅">
+      <p>📮 喜欢这篇文章？<a href="{{ "/index.xml" | absLangURL }}" target="_blank" rel="noopener noreferrer">订阅 RSS</a> 获取更新，或通过 <a href="https://github.com/vivi-789" target="_blank" rel="noopener noreferrer">GitHub</a> 关注作者。</p>
+    </aside>
 
     <aside class="post-legal" aria-label="法律声明">
       <p>声明：本文为作者个人观点与经验分享，不构成任何专业建议；文中案例、人物、公司、数据如无特别说明均为示意性处理，请勿对号入座。</p>

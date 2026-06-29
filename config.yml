@@ -69,7 +69,7 @@ params:
   env: production
   title: "陆上书斋"
   description: "Essays on management, travel, books, and AI native thinking"
-  keywords: [Blog, Knowledge Base, Hugo, PaperMod]
+  keywords: [管理思考, 组织发展, AI Native, 读书笔记, 旅行见闻, 个人知识库]
   author: "vivi-789"
   defaultTheme: auto
   disableThemeToggle: false
@@ -93,6 +93,10 @@ params:
     Title: "A quiet place for deliberate thinking"
     Content: >
       Essays on management, travel, books, and AI native practices — written for slow reading, reflection, and practical clarity.
+
+  # 默认 OG 图片
+  images:
+    - "/images/og-default.png"
 
   # 社交链接
   socialIcons:
