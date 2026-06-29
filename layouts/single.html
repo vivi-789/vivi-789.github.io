@@ -1,62 +1,143 @@
 {{- define "main" }}
-<article class="post-single fade-in">
-  <header class="post-header">
-    {{ partial "breadcrumbs.html" . }}
-    <h1 class="post-title entry-hint-parent">{{ .Title }}</h1>
+{{- $category := (index .Params.categories 0) | default "" -}}
+{{- $stats := partial "chinese_stats.html" . -}}
+
+<!-- 阅读进度条 -->
+<div class="read-progress" aria-hidden="true"></div>
+
+<div class="article-wrapper">
+
+  <!-- 主内容区 -->
+  <article class="main-content fade-in">
+
+    <header class="post-header">
+      {{ partial "breadcrumbs.html" . }}
+      <div class="post-meta-bar">
+        {{- if .Params.categories -}}
+          {{- range .Params.categories -}}
+            <span class="post-tag-pill">{{ . }}</span>
+          {{- end -}}
+        {{- end -}}
+        <span>{{ .Date.Format "2006-01-02" }}</span>
+        <span>{{ $stats.readingTime }} min read</span>
+      </div>
+
+      <h1 class="post-title entry-hint-parent">{{ .Title }}</h1>
+    </header>
+
+    {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
+    {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+
+    <!-- TL;DR 摘要条 -->
     {{- if .Description }}
-    <div class="post-description">{{ .Description }}</div>
-    {{- end }}
-    {{- $stats := partial "chinese_stats.html" . -}}
-    <div class="post-meta">
-      {{ $stats.readingTime }} min read
-      {{- partial "translation_list.html" . -}}
+    <div class="tldr-strip">
+      <strong>{{ cond (eq $category "books") "一句话种草：" "核心观点：" }}</strong> {{ .Description }}
     </div>
-  </header>
+    {{- end }}
 
-  {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
-  {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+    {{- if not (.Param "disableToc") }}
+    <!-- 移动端目录（仅小屏显示） -->
+    <div class="toc-mobile">
+      {{- partial "toc.html" . }}
+    </div>
+    {{- end }}
 
-  <section class="zen-tldr" aria-label="TL;DR">
-    <ul>
-      {{- with .Params.tldr }}
-        {{- range . }}<li>{{ . }}</li>{{- end }}
-      {{- else }}
-        {{- if .Description }}<li>{{ .Description }}</li>{{- end }}
-        <li>本文适合深度阅读，聚焦核心观点、方法框架与可执行启发。</li>
-        <li>向下阅读时导航会自动淡出，帮助你保持专注。</li>
+    {{- if .Content }}
+    <div class="post-content md-content">
+      {{- if not (.Param "disableAnchoredHeadings") }}
+      {{- partial "anchored_headings.html" .Content -}}
+      {{- else }}{{ .Content }}{{ end }}
+    </div>
+    {{- end }}
+
+    <footer class="post-footer">
+      {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+      <ul class="post-tags">
+        {{- range ($.GetTerms $tags) }}
+        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+        {{- end }}
+      </ul>
+
+      {{- if (.Param "ShowPostNavLinks") }}{{- partial "post_nav_links.html" . }}{{- end }}
+
+      {{- partial "related_posts.html" . -}}
+
+      <aside class="post-subscribe" aria-label="订阅">
+        <p>📮 喜欢这篇文章？<a href="{{ "/index.xml" | absLangURL }}" target="_blank" rel="noopener noreferrer">订阅 RSS</a> 获取更新，或通过 <a href="https://github.com/vivi-789" target="_blank" rel="noopener noreferrer">GitHub</a> 关注作者。</p>
+      </aside>
+
+      <aside class="post-legal" aria-label="法律声明">
+        <p>声明：本文为作者个人观点与经验分享，不构成任何专业建议；文中案例、人物、公司、数据如无特别说明均为示意性处理，请勿对号入座。</p>
+        <p>本文版权归作者所有。非商业转载请注明作者与原文链接；商业转载、改编、AI 训练用途须事先获得书面授权。详见<a href="{{ "/legal/" | absLangURL }}">免责声明与版权</a>。</p>
+      </aside>
+    </footer>
+
+  </article>
+
+  <!-- 侧边栏 -->
+  <aside class="sidebar" aria-label="侧边栏">
+
+    <!-- 粘性目录（桌面端） -->
+    {{- if not (.Param "disableToc") }}
+    <div class="sidebar-toc">
+      <h3>📑 目录</h3>
+      {{- .TableOfContents -}}
+    </div>
+    {{- end }}
+
+    <!-- 文章数据卡 -->
+    <div class="sidebar-meta">
+      <h3>📊 文章数据</h3>
+
+      <div class="stat-row">
+        <span class="stat-label">阅读时间</span>
+        <span class="stat-num">{{ $stats.readingTime }}'</span>
+      </div>
+
+      <div class="stat-row">
+        <span class="stat-label">字数</span>
+        <span class="stat-num">{{ $stats.charCount }}</span>
+      </div>
+
+      {{- if eq $category "management" }}
+      <div class="stat-row">
+        <span class="stat-label">核心维度</span>
+        <span class="stat-num">4</span>
+      </div>
+      {{- else if eq $category "books" }}
+      <div class="stat-row">
+        <span class="stat-label">核心观点</span>
+        <span class="stat-num">3</span>
+      </div>
+      {{- else if eq $category "ai-native" }}
+      <div class="stat-row">
+        <span class="stat-label">关键概念</span>
+        <span class="stat-num">4</span>
+      </div>
+      {{- else if eq $category "travel" }}
+      <div class="stat-row">
+        <span class="stat-label">评分</span>
+        <span class="stat-num">9.0</span>
+      </div>
       {{- end }}
-    </ul>
-  </section>
+    </div>
 
-  {{- if not (.Param "disableToc") }}{{- partial "toc.html" . }}{{- end }}
+  </aside>
 
-  {{- if .Content }}
-  <div class="post-content md-content">
-    {{- if not (.Param "disableAnchoredHeadings") }}
-    {{- partial "anchored_headings.html" .Content -}}
-    {{- else }}{{ .Content }}{{ end }}
-  </div>
-  {{- end }}
+</div>
 
-  <footer class="post-footer">
-    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
-    <ul class="post-tags">
-      {{- range ($.GetTerms $tags) }}
-      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-      {{- end }}
-    </ul>
-    {{- if (.Param "ShowPostNavLinks") }}{{- partial "post_nav_links.html" . }}{{- end }}
+<script>
+(function () {
+  const progress = document.querySelector('.read-progress');
+  function update() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    if (progress) progress.style.width = percent + '%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
 
-    {{- partial "related_posts.html" . -}}
-
-    <aside class="post-subscribe" aria-label="订阅">
-      <p>📮 喜欢这篇文章？<a href="{{ "/index.xml" | absLangURL }}" target="_blank" rel="noopener noreferrer">订阅 RSS</a> 获取更新，或通过 <a href="https://github.com/vivi-789" target="_blank" rel="noopener noreferrer">GitHub</a> 关注作者。</p>
-    </aside>
-
-    <aside class="post-legal" aria-label="法律声明">
-      <p>声明：本文为作者个人观点与经验分享，不构成任何专业建议；文中案例、人物、公司、数据如无特别说明均为示意性处理，请勿对号入座。</p>
-      <p>本文版权归作者所有。非商业转载请注明作者与原文链接；商业转载、改编、AI 训练用途须事先获得书面授权。详见<a href="{{ "/legal/" | absLangURL }}">免责声明与版权</a>。</p>
-    </aside>
-  </footer>
-</article>
 {{- end }}
