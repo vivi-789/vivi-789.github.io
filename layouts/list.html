@@ -9,8 +9,6 @@
       <div class="zen-eyebrow">Latest Essay</div>
       <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
       <p class="zen-excerpt">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | htmlUnescape | truncate 180 }}{{ end }}</p>
-      {{- $stats := partial "chinese_stats.html" . -}}
-      <div class="zen-meta">{{ $stats.readingTime }} min read</div>
       <a class="zen-read-link" href="{{ .Permalink }}">Read the essay →</a>
     </article>
     {{- end }}
@@ -21,8 +19,6 @@
         {{- range first 5 (after 1 $pages) }}
         <li>
           <a href="{{ .Permalink }}">{{ .Title }}</a>
-          {{- $stats := partial "chinese_stats.html" . -}}
-          <div class="zen-meta">{{ $stats.readingTime }} min</div>
         </li>
         {{- end }}
       </ol>
@@ -112,8 +108,6 @@
     <li>
       <span class="zen-num">{{ printf "%02d" (add $i 1) }}</span>
       <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
-      {{- $stats := partial "chinese_stats.html" $p -}}
-      <div class="zen-meta">{{ $stats.readingTime }} min read</div>
     </li>
     {{- end }}
   </ol>
