@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light dark;
   --bg-primary: #F4F1EA;
   --bg-secondary: #F9F6F0;
   --text-primary: #2C2C2C;
@@ -27,8 +28,8 @@ html {
 }
 
 body {
-  background: var(--bg-primary) !important;
-  color: var(--text-primary) !important;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   font-family: var(--sans);
   font-size: 18px;
   line-height: 1.8;
@@ -117,7 +118,7 @@ body::before {
 .menu .active,
 .lang-menu a:hover,
 .logo-switches button:hover {
-  color: var(--brand-primary) !important;
+  color: var(--brand-primary);
   border-color: var(--brand-primary);
 }
 
@@ -218,7 +219,7 @@ body::before {
 .zen-meta,
 .post-meta,
 .entry-footer {
-  color: var(--text-secondary) !important;
+  color: var(--text-secondary);
   font-size: 0.86rem;
   letter-spacing: 0.04em;
 }
@@ -374,19 +375,19 @@ body::before {
 /* 文章主标题：精致紧凑（每篇文章主题字号统一约定 = 1.8rem / ~28.8px）
    桌面与移动端共用同一字号，无 clamp 缩放，确保各文章视觉一致 */
 .post-title {
-  font-family: var(--serif) !important;
-  font-size: 1.8rem !important;
-  line-height: 1.35 !important;
-  color: var(--brand-primary) !important;
-  margin-top: 0.5rem !important;
-  margin-bottom: 1.2rem !important;
-  font-weight: 700 !important;
-  letter-spacing: -0.01em !important;
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  line-height: 1.35;
+  color: var(--brand-primary);
+  margin-top: 0.5rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 /* 面包屑与标题之间收紧 */
 .breadcrumbs {
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 0.5rem;
 }
 
 .post-description {
@@ -425,7 +426,7 @@ body::before {
   box-shadow: var(--zen-shadow);
   margin: 1.5rem auto 2rem;
   display: block;
-  max-width: 60%;
+  max-width: 75%;
   height: auto;
 }
 
@@ -436,9 +437,9 @@ body::before {
 }
 
 .post-tags a {
-  background: var(--bg-secondary) !important;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  color: var(--text-secondary) !important;
+  color: var(--text-secondary);
   border-radius: 999px;
 }
 
@@ -503,7 +504,7 @@ body::before {
 }
 
 .post-content li:has(> input[type="checkbox"])::before {
-  content: none !important;
+  content: none;
 }
 
 /* ---------------------------------------------------- */
@@ -558,63 +559,63 @@ body::before {
 
 /* 彻底消除首屏重复：隐藏多余导语 */
 .post-header .post-description {
-    display: none !important;
+    display: none;
 }
 
-/* 正文容器：锁死黄金阅读宽度与字块两端对齐 */
+/* 正文容器：黄金阅读宽度与字块两端对齐 */
 .post-content.md-content, .post-content {
-    max-width: 650px !important;
+    max-width: 680px;
     margin: 0 auto;
     text-align: justify;
     text-justify: inter-character;
-    font-size: 16.5px !important;
-    line-height: 1.65 !important;
+    font-size: 1rem;
+    line-height: 1.75;
 }
 
-/* 正文段落：进一步收紧间距，提升信息密度，消除冗长感 */
+/* 正文段落：适度间距，兼顾阅读呼吸感与信息密度 */
 .post-content p {
-    margin-top: 0 !important;
-    margin-bottom: 0.9rem !important;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 /* 主旨声明块样式打磨 */
 .post-content > blockquote:first-of-type {
-    border-left: 3px solid var(--brand-primary) !important;
-    background-color: var(--bg-secondary) !important;
-    padding: 1.1rem 1.25rem !important;
-    margin: 0 0 2rem 0 !important;
+    border-left: 3px solid var(--brand-primary);
+    background-color: var(--bg-secondary);
+    padding: 1.1rem 1.25rem;
+    margin: 0 0 2rem 0;
     border-radius: 4px;
 }
 .post-content > blockquote:first-of-type p {
-    font-size: 1.05rem !important;
-    color: var(--text-primary) !important;
+    font-size: 1.05rem;
+    color: var(--text-primary);
     font-weight: 500;
-    margin: 0 !important;
+    margin: 0;
 }
 
 /* 隐去标题后的极简摘要框组件 */
 .zen-tldr {
-    background-color: var(--bg-secondary) !important;
-    border-left: 4px solid var(--brand-primary) !important;
-    padding: 1.25rem 1.5rem !important;
-    margin-bottom: 2rem !important;
+    background-color: var(--bg-secondary);
+    border-left: 4px solid var(--brand-primary);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
     border-radius: 0 6px 6px 0;
 }
 .zen-tldr ul {
-    list-style-type: none !important;
-    padding-left: 0 !important;
-    margin: 0 !important;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
 }
 .zen-tldr ul li {
     position: relative;
-    padding-left: 1.25rem !important;
-    margin-bottom: 0.5rem !important;
-    font-size: 0.95rem !important;
-    line-height: 1.5 !important;
-    color: var(--text-secondary) !important;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
 }
 .zen-tldr ul li:last-child {
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
 }
 .zen-tldr ul li::before {
     content: "—";
@@ -626,23 +627,23 @@ body::before {
 
 /* 大标题纵向呼吸感微调 */
 .post-content h2 {
-    font-family: var(--serif) !important;
-    font-size: 1.45rem !important;
-    color: var(--brand-primary) !important;
-    margin-top: 2.5rem !important;
-    margin-bottom: 1rem !important;
-    padding-bottom: 0.4rem !important;
-    border-left: none !important;
-    border-bottom: 1px solid var(--border-color) !important;
+    font-family: var(--serif);
+    font-size: 1.55rem;
+    color: var(--brand-primary);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    border-left: none;
+    border-bottom: 1px solid var(--border-color);
 }
 
 /* 二级标题转换成内敛黛绿色 */
 .post-content h3 {
-    font-family: var(--serif) !important;
-    font-size: 1.25rem !important;
-    color: var(--brand-secondary) !important;
-    margin-top: 1.75rem !important;
-    margin-bottom: 0.75rem !important;
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    color: var(--brand-secondary);
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
 }
 
 /* 正文列表间距收紧与自定义符号（仅作用于一级列表，嵌套恢复默认） */
@@ -651,15 +652,15 @@ body::before {
     list-style-type: none;
     padding-left: 0;
     margin-top: 0;
-    margin-bottom: 1.25rem !important;
+    margin-bottom: 1.25rem;
 }
 .post-content > ul > li,
 .post-content > blockquote > ul > li {
     position: relative;
-    padding-left: 1.25rem !important;
-    margin-bottom: 0.4rem !important;
-    font-size: 16px;
-    line-height: 1.6 !important;
+    padding-left: 1.25rem;
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 .post-content > ul > li::before,
 .post-content > blockquote > ul > li::before {
@@ -678,8 +679,8 @@ body::before {
 
 hr {
     border: 0;
-    border-top: 1px solid var(--border-color) !important;
-    margin: 2rem 0 !important;
+    border-top: 1px solid var(--border-color);
+    margin: 2rem 0;
 }
 
 /* ==========================================================================
