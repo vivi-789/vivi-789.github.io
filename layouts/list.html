@@ -70,6 +70,27 @@
       </a>
     </div>
   </section>
+
+  {{- /* Category Featured Picks */ -}}
+  <section class="zen-category-picks fade-in" aria-label="分类精选">
+    <h2>分类精选</h2>
+    <div class="zen-picks-grid">
+      {{- $cats := slice "management" "travel" "books" "ai-native" -}}
+      {{- range $cats -}}
+        {{- $cat := site.GetPage (printf "categories/%s" .) -}}
+        {{- with $cat -}}
+          {{- $latest := index .Pages 0 -}}
+          {{- with $latest -}}
+          <article class="zen-pick-card">
+            <div class="pick-label">{{ $cat.Title }}</div>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <p class="pick-desc">{{ with .Description }}{{ . | plainify | truncate 80 }}{{ else }}{{ .Summary | plainify | truncate 80 }}{{ end }}</p>
+          </article>
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    </div>
+  </section>
 {{- else }}
   <header class="page-header fade-in">
     {{- partial "breadcrumbs.html" . }}
