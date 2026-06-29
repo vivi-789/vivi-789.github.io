@@ -683,6 +683,95 @@ hr {
 }
 
 /* ==========================================================================
+   相关阅读区块样式
+   ========================================================================== */
+
+.post-related {
+    margin: 2rem 0;
+    padding: 1.2rem 1.5rem;
+    background: color-mix(in srgb, var(--bg-secondary) 92%, transparent);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+}
+
+.post-related h3 {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--brand-primary);
+    margin: 0 0 0.8rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--border-color) 60%, transparent);
+}
+
+.post-related ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.post-related li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--border-color) 40%, transparent);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.post-related li:last-child {
+    border-bottom: none;
+}
+
+.post-related li a {
+    font-family: var(--serif);
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    text-decoration: none;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.post-related li a:hover {
+    color: var(--brand-primary);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.post-related li .zen-meta {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   RSS 订阅引导
+   ========================================================================== */
+
+.post-subscribe {
+    margin: 1.5rem 0;
+    padding: 0.9rem 1.2rem;
+    background: color-mix(in srgb, var(--brand-primary) 5%, transparent);
+    border-left: 3px solid var(--brand-primary);
+    border-radius: 0 8px 8px 0;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+}
+
+.post-subscribe a {
+    color: var(--brand-primary);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--brand-primary) 40%, transparent);
+}
+
+.post-subscribe a:hover {
+    border-bottom-color: var(--brand-primary);
+}
+
+/* ==========================================================================
    导航栏内联搜索框
    ========================================================================== */
 

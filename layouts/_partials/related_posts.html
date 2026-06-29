@@ -4,7 +4,7 @@
   <h3>相关阅读</h3>
   <ul>
     {{- range . }}
-    <li><a href="{{ .Permalink }}">{{ .Title }}</a><span class="zen-meta">{{ partial "chinese_stats.html" . }}{{ .ReadingTime }} min</span></li>
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a><span class="zen-meta">{{- $stats := partial "chinese_stats.html" . -}}{{- $stats.readingTime }} min</span></li>
     {{- end }}
   </ul>
 </aside>
@@ -21,7 +21,7 @@
   <h3>相关阅读</h3>
   <ul>
     {{- range . }}
-    <li><a href="{{ .Permalink }}">{{ .Title }}</a><span class="zen-meta">{{ partial "chinese_stats.html" . }}{{ .ReadingTime }} min</span></li>
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a><span class="zen-meta">{{- $stats := partial "chinese_stats.html" . -}}{{- $stats.readingTime }} min</span></li>
     {{- end }}
   </ul>
 </aside>
