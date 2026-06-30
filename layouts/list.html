@@ -100,8 +100,9 @@
   {{- end }}
 
   {{- $pages := union .RegularPages .Sections }}
-  {{- /* 反转分页前的源列表：让最早发布的拿到 01 序号（分类内正序） */}}
+  {{- /* 列表优先按 weight 排序，再按日期正序；用于确保《你好，世界》始终第 1 篇 */}}
   {{- $sorted := sort $pages "Date" "asc" }}
+  {{- $sorted = sort $sorted "Weight" "asc" }}
   {{- $paginator := .Paginate $sorted }}
   <ol class="zen-article-list zen-numbered fade-in">
     {{- range $i, $p := $paginator.Pages }}

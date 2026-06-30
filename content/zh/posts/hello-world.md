@@ -1,5 +1,6 @@
 ---
 title: "你好，世界"
+weight: -100
 date: 2026-06-18T10:00:00+08:00
 draft: false
 tags: ["hello", "getting-started"]
