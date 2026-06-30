@@ -1,7 +1,7 @@
 baseURL: "https://vivi-789.github.io"
 languageCode: "en-us"
 title: "陆上书斋"
-copyright: "© 2026 vivi的学习空间 · 本站原创文章未经书面授权禁止商业转载；非商业转载请注明作者与原文链接。"
+copyright: "本站原创文章未经书面授权禁止商业转载；非商业转载请注明作者与原文链接。"
 theme: "PaperMod"
 defaultContentLanguage: "zh"
 defaultContentLanguageInSubdir: true
