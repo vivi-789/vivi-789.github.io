@@ -98,25 +98,12 @@
         <span class="stat-num">{{ $stats.charCount }}</span>
       </div>
 
-      {{- if eq $category "management" }}
+      {{- if gt $stats.h3Count 0 }}
       <div class="stat-row">
-        <span class="stat-label">核心维度</span>
-        <span class="stat-num">4</span>
-      </div>
-      {{- else if eq $category "books" }}
-      <div class="stat-row">
-        <span class="stat-label">核心观点</span>
-        <span class="stat-num">3</span>
-      </div>
-      {{- else if eq $category "ai-native" }}
-      <div class="stat-row">
-        <span class="stat-label">关键概念</span>
-        <span class="stat-num">4</span>
-      </div>
-      {{- else if eq $category "travel" }}
-      <div class="stat-row">
-        <span class="stat-label">评分</span>
-        <span class="stat-num">9.0</span>
+        <span class="stat-label">
+          {{- cond (eq $category "books") "核心观点" (cond (eq $category "management") "核心维度" "关键章节") -}}
+        </span>
+        <span class="stat-num">{{ $stats.h3Count }}</span>
       </div>
       {{- end }}
     </div>

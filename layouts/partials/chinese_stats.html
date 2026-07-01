@@ -7,4 +7,5 @@
 {{- $plain := .Plain -}}
 {{- $charCount := countrunes $plain -}}
 {{- $readingTime := math.Max 1 (div (add $charCount 499) 500) -}}
-{{- return dict "charCount" $charCount "readingTime" $readingTime -}}
+{{- $h3Count := len (findRE "<h3" .RawContent) -}}
+{{- return dict "charCount" $charCount "readingTime" $readingTime "h3Count" $h3Count -}}
