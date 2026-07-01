@@ -1,5 +1,4 @@
 baseURL: "https://vivi-789.github.io"
-languageCode: "en-us"
 title: "陆上书斋"
 copyright: "本站原创文章未经书面授权禁止商业转载；非商业转载请注明作者与原文链接。"
 theme: "PaperMod"
@@ -9,7 +8,8 @@ defaultContentLanguageInSubdir: true
 # 多语言配置
 languages:
   en:
-    languageName: "English"
+    label: "English"
+    locale: "en-US"
     contentDir: "content/en"
     weight: 1
     menu:
@@ -30,7 +30,8 @@ languages:
           url: "/search/"
           weight: 5
   zh:
-    languageName: "中文"
+    label: "中文"
+    locale: "zh-CN"
     contentDir: "content/zh"
     weight: 2
     menu:
