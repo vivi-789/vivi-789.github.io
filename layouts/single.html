@@ -27,10 +27,10 @@
     {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
     {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
 
-    <!-- TL;DR 摘要条 -->
-    {{- if .Description }}
+    <!-- TL;DR 摘要条：书籍类文章正文已有“一句话种草”段落，避免重复显示 -->
+    {{- if and .Description (ne $category "books") }}
     <div class="tldr-strip">
-      <strong>{{ cond (eq $category "books") "一句话种草：" "核心观点：" }}</strong> {{ .Description }}
+      <strong>核心观点：</strong> {{ .Description }}
     </div>
     {{- end }}
 
@@ -111,6 +111,59 @@
   </aside>
 
 </div>
+
+<script>
+(function () {
+  const content = document.querySelector('.post-content');
+  const sidebarToc = document.querySelector('.sidebar-toc');
+  const mobileToc = document.querySelector('.toc-mobile .inner');
+  if (!content || !sidebarToc) return;
+
+  const headings = Array.from(content.querySelectorAll('h2, h3')).filter(h => h.textContent.trim());
+  if (!headings.length) return;
+
+  function slugify(text) {
+    return text.trim()
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/[^\w一-龥\-]/g, '')
+      .replace(/\-+/g, '-');
+  }
+
+  const seen = new Map();
+  headings.forEach(h => {
+    if (!h.id) {
+      const base = slugify(h.textContent) || 'section';
+      const count = seen.get(base) || 0;
+      seen.set(base, count + 1);
+      h.id = count ? `${base}-${count + 1}` : base;
+    }
+  });
+
+  const nav = document.createElement('nav');
+  nav.id = 'TableOfContents';
+  const ul = document.createElement('ul');
+  headings.forEach(h => {
+    const li = document.createElement('li');
+    if (h.tagName.toLowerCase() === 'h3') li.className = 'toc-h3';
+    const a = document.createElement('a');
+    a.href = `#${h.id}`;
+    a.textContent = h.textContent.trim();
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+  nav.appendChild(ul);
+
+  const existingSidebarToc = sidebarToc.querySelector('#TableOfContents');
+  if (existingSidebarToc) existingSidebarToc.remove();
+  sidebarToc.appendChild(nav.cloneNode(true));
+
+  if (mobileToc) {
+    mobileToc.innerHTML = '';
+    mobileToc.appendChild(nav.cloneNode(true));
+  }
+})();
+</script>
 
 <script>
 (function () {
