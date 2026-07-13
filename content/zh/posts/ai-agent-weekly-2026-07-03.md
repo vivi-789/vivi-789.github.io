@@ -39,11 +39,11 @@ fullWidth: true
   }
   .report-header {
     text-align: center;
-    padding: 36px 24px 28px;
+    padding: 28px 20px 20px;
     background: linear-gradient(135deg, #1a1d27 0%, #16181f 100%);
     border-radius: 16px;
     border: 1px solid var(--border);
-    margin-bottom: 28px;
+    margin-bottom: 10px;
   }
   .report-header h1 {
     font-size: 24px;
@@ -67,7 +67,7 @@ fullWidth: true
   .stats-bar {
     display: flex;
     gap: 12px;
-    margin-bottom: 28px;
+    margin-bottom: 10px;
     flex-wrap: wrap;
   }
   .stat-card {
@@ -76,7 +76,7 @@ fullWidth: true
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 16px 20px;
+    padding: 10px 14px;
     text-align: center;
   }
   .stat-card .num { font-size: 28px; font-weight: 700; color: var(--accent-light); }
@@ -86,7 +86,7 @@ fullWidth: true
   .section-title {
     font-size: 18px;
     font-weight: 700;
-    margin: 32px 0 16px;
+    margin: 24px 0 12px;
     padding-left: 14px;
     border-left: 4px solid var(--accent);
     display: flex;
@@ -107,15 +107,15 @@ fullWidth: true
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 14px;
-    padding: 24px;
-    margin-bottom: 20px;
+    padding: 18px;
+    margin-bottom: 10px;
     transition: border-color 0.2s;
   }
   .video-card:hover { border-color: var(--accent); }
   .video-card .card-header {
     display: flex;
     gap: 14px;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     flex-wrap: wrap;
   }
   .video-card .thumb {
@@ -156,8 +156,8 @@ fullWidth: true
   .speaker-box {
     background: var(--section-bg);
     border-radius: 8px;
-    padding: 10px 14px;
-    margin-bottom: 14px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
     font-size: 13px;
   }
   .speaker-box .label {
@@ -170,7 +170,7 @@ fullWidth: true
     display: flex;
     gap: 6px;
     flex-wrap: wrap;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }
   .tag {
     font-size: 11px;
@@ -182,7 +182,7 @@ fullWidth: true
 
   .insight-list { list-style: none; padding: 0; }
   .insight-list li {
-    padding: 10px 0 10px 22px;
+    padding: 8px 0 8px 22px;
     position: relative;
     font-size: 14px;
     border-bottom: 1px solid var(--border);
@@ -201,8 +201,8 @@ fullWidth: true
   .actions-box {
     background: var(--section-bg);
     border-radius: 8px;
-    padding: 14px 16px;
-    margin-top: 14px;
+    padding: 10px 12px;
+    margin-top: 10px;
   }
   .actions-box .actions-title {
     font-size: 12px;
@@ -223,8 +223,8 @@ fullWidth: true
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 14px;
-    padding: 24px;
-    margin-bottom: 20px;
+    padding: 18px;
+    margin-bottom: 10px;
   }
   .radar-section h3 {
     font-size: 15px;
@@ -297,8 +297,8 @@ fullWidth: true
     background: linear-gradient(135deg, #fffdf9 0%, #f7f1e8 100%);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 20px 24px;
-    margin-bottom: 16px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
     position: relative;
   }
   .quote-card::before {
@@ -336,7 +336,7 @@ fullWidth: true
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 10px;
-    padding: 12px 16px;
+    padding: 10px 14px;
   }
   .priority-item .rank {
     width: 28px;
@@ -360,7 +360,7 @@ fullWidth: true
     font-size: 12px;
     color: var(--text-muted);
   }
-  .footer hr { border: none; border-top: 1px solid var(--border); margin-bottom: 16px; }
+  .footer hr { border: none; border-top: 1px solid var(--border); margin-bottom: 12px; }
 
   @media (max-width: 600px) {
     .video-card .card-header { flex-direction: column; }
