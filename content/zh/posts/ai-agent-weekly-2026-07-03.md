@@ -11,13 +11,8 @@ hideMeta: true
 ---
 
 {{< rawhtml >}}
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Agent 组织变革周报 - 2026年7月3日</title>
 <style>
+
   :root {
     --bg: #faf7f2;
     --card: #fffdf9;
@@ -35,14 +30,11 @@ hideMeta: true
     --section-bg: #f7f1e8;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
+  .weekly-report {
     background: var(--bg);
     color: var(--text);
     font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
     line-height: 1.75;
-    padding: 24px 16px;
-    max-width: 920px;
-    margin: 0 auto;
   }
   .report-header {
     text-align: center;
@@ -374,12 +366,11 @@ hideMeta: true
     .video-card .thumb { width: 100%; height: 80px; }
     .stats-bar { flex-direction: column; }
   }
-</style>
-</head>
-<body>
 
+</style>
+<div class="weekly-report">
 <div class="report-header">
-  <h1>AI Agent 组织变革周报</h1>
+  <h1>AI Native 组织变革周报</h1>
   <div class="meta">
     <span>📅 2026年7月3日（周三）</span>
     <span>📊 第1期</span>
@@ -895,11 +886,8 @@ hideMeta: true
 
 <div class="footer">
   <hr>
-  <p>AI Agent 组织变革周报 · 由 Hermes Agent 自动生成</p>
+  <p>AI Native 组织变革周报 · 由 Hermes Agent 自动生成</p>
   <p>数据来源：YouTube 公开视频 · 仅供学习参考</p>
 </div>
-
-</body>
-</html>
-
+</div>
 {{< /rawhtml >}}
