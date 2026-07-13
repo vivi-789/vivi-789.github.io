@@ -12,6 +12,7 @@
 
     <header class="post-header">
       {{ partial "breadcrumbs.html" . }}
+      {{- if not (.Param "hideMeta") }}
       <div class="post-meta-bar">
         {{- if .Params.categories -}}
           {{- range .Params.categories -}}
@@ -20,6 +21,7 @@
         {{- end -}}
         <span>{{ $stats.readingTime }} min read</span>
       </div>
+      {{- end }}
 
       <h1 class="post-title entry-hint-parent">{{ .Title }}</h1>
     </header>
@@ -84,6 +86,7 @@
     </div>
     {{- end }}
 
+    {{- if not (.Param "hideMeta") }}
     <!-- 文章数据卡 -->
     <div class="sidebar-meta">
       <h3>📊 文章数据</h3>
@@ -107,6 +110,7 @@
       </div>
       {{- end }}
     </div>
+    {{- end }}
 
   </aside>
 
