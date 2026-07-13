@@ -5,7 +5,8 @@
 <!-- 阅读进度条 -->
 <div class="read-progress" aria-hidden="true"></div>
 
-<div class="article-wrapper">
+{{- $fullWidth := .Param "fullWidth" | default false -}}
+<div class="article-wrapper{{ if $fullWidth }} full-width{{ end }}">
 
   <!-- 主内容区 -->
   <article class="main-content fade-in">

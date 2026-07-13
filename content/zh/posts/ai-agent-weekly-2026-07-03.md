@@ -8,6 +8,7 @@ categories: ["ai-native"]
 description: "AI Native 组织变革周报第1期，涵盖 Agent Harness、AI Factory、人才模型变革等9条精选内容。"
 disableToc: true
 hideMeta: true
+fullWidth: true
 ---
 
 {{< rawhtml >}}
