@@ -371,7 +371,7 @@ fullWidth: true
 </style>
 <div class="weekly-report">
 <div class="report-header">
-  <h1>AI Native 组织变革周报</h1>
+  <h1>AI Native 周报</h1>
   <div class="meta">
     <span>📅 2026年7月3日（周三）</span>
     <span>📊 第1期</span>
@@ -887,7 +887,7 @@ fullWidth: true
 
 <div class="footer">
   <hr>
-  <p>AI Native 组织变革周报 · 由 Hermes Agent 自动生成</p>
+  <p>AI Native 周报 · 由 Hermes Agent 自动生成</p>
   <p>数据来源：YouTube 公开视频 · 仅供学习参考</p>
 </div>
 </div>

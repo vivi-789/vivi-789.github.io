@@ -122,7 +122,7 @@ fullWidth: true
 </style>
 <div class="weekly-report">
 <div class="report-header">
-  <h1>AI Native 组织变革周报</h1>
+  <h1>AI Native 周报</h1>
   <div class="meta">
     <span>📅 2026年7月15日（周三）</span>
     <span>📊 第2期</span>
@@ -610,7 +610,7 @@ fullWidth: true
 
 <div class="footer">
   <hr>
-  <p>AI Native 组织变革周报 · 由 AI 辅助检索和整理，经人工审核编辑</p>
+  <p>AI Native 周报 · 由 AI 辅助检索和整理，经人工审核编辑</p>
   <p>数据来源：YouTube 公开视频 · 仅供个人学习参考，不构成任何商业建议</p>
   <p>本报告基于公开视频内容的摘要与评论，版权归原作者所有，引用内容均附原始链接。</p>
   <p>报告中提及的公司名称和产品名称均为各自公司的商标，本报告与上述公司无关联或授权关系。</p>
