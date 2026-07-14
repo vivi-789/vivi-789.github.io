@@ -103,23 +103,55 @@
   {{- /* 列表优先按 weight 排序，再按日期正序；用于确保《你好，世界》始终第 1 篇 */}}
   {{- $sorted := sort $pages "Date" "asc" }}
   {{- $sorted = sort $sorted "Weight" "asc" }}
-  {{- $paginator := .Paginate $sorted }}
-  <ol class="zen-article-list zen-numbered fade-in">
-    {{- range $i, $p := $paginator.Pages }}
-    <li>
-      <span class="zen-num">{{ printf "%02d" (add $i 1) }}</span>
-      <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
-    </li>
-    {{- end }}
-  </ol>
 
-  {{- if gt $paginator.TotalPages 1 }}
-  <footer class="page-footer">
-    <nav class="pagination">
-      {{- if $paginator.HasPrev }}<a class="prev" href="{{ $paginator.Prev.URL | absURL }}">« Prev</a>{{- end }}
-      {{- if $paginator.HasNext }}<a class="next" href="{{ $paginator.Next.URL | absURL }}">Next »</a>{{- end }}
-    </nav>
-  </footer>
+  {{- /* AI Native 分类：文章与周报分流显示 */}}
+  {{- if eq .RelPermalink "/zh/categories/ai-native/" }}
+    {{- $weeklies := where $sorted "Params.tags" "intersect" (slice "ai-native-weekly") }}
+    {{- $articles := $sorted | complement $weeklies }}
+
+    {{- with $articles }}
+    <h2 class="zen-section-header" style="margin-top: 2rem; margin-bottom: 1rem; text-align: left; opacity: 1; color: var(--text-primary); font-size: 1rem;">📄 文章</h2>
+    <ol class="zen-article-list zen-numbered fade-in">
+      {{- range $i, $p := . }}
+      <li>
+        <span class="zen-num">{{ printf "%02d" (add $i 1) }}</span>
+        <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
+      </li>
+      {{- end }}
+    </ol>
+    {{- end }}
+
+    {{- with $weeklies }}
+    <h2 class="zen-section-header" style="margin-top: 3rem; margin-bottom: 1rem; text-align: left; opacity: 1; color: var(--text-primary); font-size: 1rem;">📰 组织变革周报</h2>
+    <ol class="zen-article-list zen-numbered fade-in">
+      {{- range $i, $p := . }}
+      <li>
+        <span class="zen-num">{{ printf "%02d" (add $i 1) }}</span>
+        <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
+      </li>
+      {{- end }}
+    </ol>
+    {{- end }}
+
+  {{- else }}
+    {{- $paginator := .Paginate $sorted }}
+    <ol class="zen-article-list zen-numbered fade-in">
+      {{- range $i, $p := $paginator.Pages }}
+      <li>
+        <span class="zen-num">{{ printf "%02d" (add $i 1) }}</span>
+        <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
+      </li>
+      {{- end }}
+    </ol>
+
+    {{- if gt $paginator.TotalPages 1 }}
+    <footer class="page-footer">
+      <nav class="pagination">
+        {{- if $paginator.HasPrev }}<a class="prev" href="{{ $paginator.Prev.URL | absURL }}">« Prev</a>{{- end }}
+        {{- if $paginator.HasNext }}<a class="next" href="{{ $paginator.Next.URL | absURL }}">Next »</a>{{- end }}
+      </nav>
+    </footer>
+    {{- end }}
   {{- end }}
 {{- end }}
 {{- end }}

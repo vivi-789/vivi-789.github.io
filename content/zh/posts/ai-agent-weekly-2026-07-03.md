@@ -3,7 +3,7 @@ title: "AI Native 组织变革周报 - 2026年7月3日"
 slug: "ai-agent-weekly-2026-07-03"
 date: 2026-07-03T15:00:00+08:00
 draft: false
-tags: ["AI Agent", "组织变革", "周报", "AI Native", "企业落地"]
+tags: ["AI Agent", "组织变革", "周报", "AI Native", "企业落地", "ai-native-weekly"]
 categories: ["ai-native"]
 description: "AI Native 组织变革周报第1期，涵盖 Agent Harness、AI Factory、人才模型变革等9条精选内容。"
 disableToc: true

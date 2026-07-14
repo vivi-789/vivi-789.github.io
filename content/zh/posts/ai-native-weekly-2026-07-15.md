@@ -3,7 +3,7 @@ title: "AI Native 组织变革周报 - 2026年7月15日"
 slug: "ai-native-weekly-2026-07-15"
 date: 2026-07-14T15:00:00+08:00
 draft: false
-tags: ["AI Agent", "组织变革", "周报", "AI Native", "企业落地"]
+tags: ["AI Agent", "组织变革", "周报", "AI Native", "企业落地", "ai-native-weekly"]
 categories: ["ai-native"]
 description: "AI Native 组织变革周报第2期，涵盖开放Agent生态、AI收入贡献量化、Forward-Deployed模式等10条精选内容。"
 disableToc: true
