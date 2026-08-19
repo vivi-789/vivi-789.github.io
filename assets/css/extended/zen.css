@@ -160,9 +160,9 @@ body::before {
 .zen-home-hero {
   margin: 34px 0 60px;
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
-  gap: 4rem;
-  align-items: start;
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.65fr);
+  gap: 2.5rem;
+  align-items: stretch;
 }
 
 .zen-featured,
@@ -176,6 +176,13 @@ body::before {
 
 .zen-featured {
   padding: 2.2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.zen-featured .zen-read-link {
+  margin-top: auto;
 }
 
 .zen-eyebrow {
@@ -234,24 +241,30 @@ body::before {
 }
 
 .zen-list-panel {
-  padding: 1.8rem;
+  padding: 1.6rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .zen-list-panel h2 {
   font-family: var(--serif);
   color: var(--text-primary);
   font-size: 1.15rem;
-  margin: 0 0 1.2rem;
+  margin: 0 0 1rem;
+  flex-shrink: 0;
 }
 
 .zen-article-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  overflow-y: auto;
 }
 
 .zen-article-list li {
-  padding: 1rem 0;
+  padding: 0.85rem 0;
   border-top: 1px solid var(--border-color);
 }
 
