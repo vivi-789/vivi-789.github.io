@@ -39,18 +39,31 @@ languages:
         - name: "首页"
           url: "/zh/"
           weight: 1
-        - name: "文章"
-          url: "/zh/posts/"
+        - name: "管理"
+          identifier: "category-management"
+          url: "/zh/categories/management/"
           weight: 2
+        - name: "书籍"
+          identifier: "category-books"
+          url: "/zh/categories/books/"
+          weight: 3
+        - name: "AI Native"
+          identifier: "category-ai-native"
+          url: "/zh/categories/ai-native/"
+          weight: 4
+        - name: "旅游"
+          identifier: "category-travel"
+          url: "/zh/categories/travel/"
+          weight: 5
         - name: "关于"
           url: "/zh/about/"
-          weight: 3
+          weight: 6
         - name: "搜索"
           url: "/zh/search/"
-          weight: 4
+          weight: 7
         - name: "免责声明"
           url: "/zh/legal/"
-          weight: 5
+          weight: 8
 
 # PaperMod 主题参数
 params:
