@@ -30,7 +30,7 @@
   <section class="zen-categories fade-in" aria-label="主题分类">
     <h2 class="zen-section-header">按主题阅读</h2>
     <div class="zen-categories-grid">
-      {{- $cats := slice "management" "travel" "books" "ai-native" -}}
+      {{- $cats := slice "management" "books" "ai-native" "travel" -}}
       {{- range $cats -}}
         {{- $cat := site.GetPage (printf "categories/%s" .) -}}
         {{- $latest := index $cat.Pages 0 -}}
