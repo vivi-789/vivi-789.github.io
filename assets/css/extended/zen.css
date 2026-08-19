@@ -241,7 +241,7 @@ body::before {
 }
 
 .zen-list-panel {
-  padding: 1.6rem;
+  padding: 1.2rem;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -251,8 +251,8 @@ body::before {
 .zen-list-panel h2 {
   font-family: var(--serif);
   color: var(--text-primary);
-  font-size: 1.15rem;
-  margin: 0 0 1rem;
+  font-size: 1rem;
+  margin: 0 0 0.7rem;
   flex-shrink: 0;
 }
 
@@ -264,7 +264,7 @@ body::before {
 }
 
 .zen-article-list li {
-  padding: 0.85rem 0;
+  padding: 0.55rem 0;
   border-top: 1px solid var(--border-color);
 }
 
@@ -289,12 +289,19 @@ body::before {
   color: var(--brand-primary);
 }
 
-/* Recent Notes：元信息紧贴标题、条目之间拉开 */
-.zen-article-list li .zen-meta {
-  margin-top: 0.15rem;
-  margin-bottom: 0.75rem;
+/* 首页 Recent Notes 专用紧凑样式 */
+.zen-list-panel .zen-article-list a {
+  font-size: 0.98rem;
+  line-height: 1.34;
 }
-.zen-article-list li:last-child .zen-meta {
+
+.zen-list-panel .zen-article-list li .zen-meta {
+  font-size: 0.78rem;
+  margin-top: 0.1rem;
+  margin-bottom: 0.45rem;
+}
+
+.zen-list-panel .zen-article-list li:last-child .zen-meta {
   margin-bottom: 0;
 }
 
