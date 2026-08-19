@@ -42,28 +42,15 @@ languages:
         - name: "文章"
           url: "/zh/posts/"
           weight: 2
-        - name: "管理类"
-          url: "/zh/categories/management/"
-          weight: 3
-        - name: "旅游类"
-          url: "/zh/categories/travel/"
-          weight: 4
-        - name: "书籍类"
-          url: "/zh/categories/books/"
-          weight: 5
-        - name: "AI Native"
-          identifier: "ai-native-category"
-          url: "/zh/categories/ai-native/"
-          weight: 6
         - name: "关于"
           url: "/zh/about/"
-          weight: 7
+          weight: 3
         - name: "搜索"
           url: "/zh/search/"
-          weight: 8
-        - name: "免责声明与版权"
+          weight: 4
+        - name: "免责声明"
           url: "/zh/legal/"
-          weight: 10
+          weight: 5
 
 # PaperMod 主题参数
 params:
@@ -126,7 +113,7 @@ outputs:
     - JSON
 
 # 分页
-paginate: 5
+paginate: 15
 paginatePath: "page"
 
 # 永久链接

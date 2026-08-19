@@ -77,6 +77,17 @@
     results.style.display = 'block';
   }
 
+  const toggle = document.getElementById('nav-search-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', function () {
+      const expanded = input.classList.toggle('mobile-expanded');
+      toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      if (expanded) {
+        input.focus();
+      }
+    });
+  }
+
   input.addEventListener('input', function () {
     render(search(this.value.trim()));
   });

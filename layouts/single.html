@@ -2,9 +2,6 @@
 {{- $category := (index .Params.categories 0) | default "" -}}
 {{- $stats := partial "chinese_stats.html" . -}}
 
-<!-- 阅读进度条 -->
-<div class="read-progress" aria-hidden="true"></div>
-
 {{- $fullWidth := .Param "fullWidth" | default false -}}
 <div class="article-wrapper{{ if $fullWidth }} full-width{{ end }}">
 
@@ -167,20 +164,6 @@
     mobileToc.innerHTML = '';
     mobileToc.appendChild(nav.cloneNode(true));
   }
-})();
-</script>
-
-<script>
-(function () {
-  const progress = document.querySelector('.read-progress');
-  function update() {
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    if (progress) progress.style.width = percent + '%';
-  }
-  window.addEventListener('scroll', update, { passive: true });
-  update();
 })();
 </script>
 

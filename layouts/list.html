@@ -6,83 +6,53 @@
   <section class="zen-home-hero fade-in" aria-label="Featured writing">
     {{- with $latest }}
     <article class="zen-featured">
-      <div class="zen-eyebrow">Latest Essay</div>
+      <div class="zen-eyebrow">最新长文</div>
       <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
       <p class="zen-excerpt">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | htmlUnescape | truncate 180 }}{{ end }}</p>
-      <a class="zen-read-link" href="{{ .Permalink }}">Read the essay →</a>
+      <a class="zen-read-link" href="{{ .Permalink }}">阅读全文 →</a>
     </article>
     {{- end }}
 
-    <aside class="zen-list-panel" aria-label="Recent articles">
-      <h2>Recent Notes</h2>
+    <aside class="zen-list-panel" aria-label="最近笔记">
+      <h2>最近笔记</h2>
       <ol class="zen-article-list">
         {{- range first 5 (after 1 $pages) }}
+        {{- $stats := partial "chinese_stats.html" . }}
         <li>
           <a href="{{ .Permalink }}">{{ .Title }}</a>
+          <div class="zen-meta">{{ .Date.Format "2006.01.02" }} · {{ $stats.readingTime }} min read</div>
         </li>
         {{- end }}
       </ol>
     </aside>
   </section>
 
-  <section class="zen-categories fade-in" aria-label="Knowledge categories">
-    <h2 class="zen-section-header">EXPLORE MY UNIVERSE</h2>
+  <section class="zen-categories fade-in" aria-label="主题分类">
+    <h2 class="zen-section-header">按主题阅读</h2>
     <div class="zen-categories-grid">
-      <a class="zen-category-card" href="{{ "/categories/management/" | absLangURL }}">
-        <h3>🌐 懂业务与团队管理</h3>
-        <p>看懂业务底层，研究组织发展（OD）与带兵打仗。</p>
-        <div class="zen-badges">
-          <span class="zen-badge">管理学思考</span>
-          <span class="zen-badge">组织进化笔记</span>
-          <span class="zen-badge">团队实战心得</span>
-        </div>
-      </a>
-      <a class="zen-category-card" href="{{ "/categories/travel/" | absLangURL }}">
-        <h3>🧭 走出去与看大千世界</h3>
-        <p>行万里路看真实世界，通过路线体验丰富人生阅历。</p>
-        <div class="zen-badges">
-          <span class="zen-badge">日常观察</span>
-          <span class="zen-badge">实地调研</span>
-          <span class="zen-badge">旅行见闻</span>
-        </div>
-      </a>
-      <a class="zen-category-card" href="{{ "/categories/books/" | absLangURL }}">
-        <h3>🔍 读好书与记读书笔记</h3>
-        <p>拒绝碎片信息，死磕经典好书，内化大牛底层智慧。</p>
-        <div class="zen-badges">
-          <span class="zen-badge">系统读书笔记</span>
-          <span class="zen-badge">深度书评</span>
-          <span class="zen-badge">知识整理</span>
-        </div>
-      </a>
-      <a class="zen-category-card" href="{{ "/categories/ai-native/" | absLangURL }}">
-        <h3>🛠️ 智能组织与用好 AI</h3>
-        <p>探索未来 AI 组织形态，寻找非技术同学的提效解法。</p>
-        <div class="zen-badges">
-          <span class="zen-badge">AI组织形态</span>
-          <span class="zen-badge">智能体/工作流</span>
-          <span class="zen-badge">落地案例</span>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  {{- /* Category Featured Picks */ -}}
-  <section class="zen-category-picks fade-in" aria-label="分类精选">
-    <h2>分类精选</h2>
-    <div class="zen-picks-grid">
       {{- $cats := slice "management" "travel" "books" "ai-native" -}}
       {{- range $cats -}}
         {{- $cat := site.GetPage (printf "categories/%s" .) -}}
+        {{- $latest := index $cat.Pages 0 -}}
+        {{- $desc := dict "management" "看懂业务底层，研究组织发展与带兵打仗。" "travel" "行万里路看真实世界，通过路线体验丰富人生阅历。" "books" "拒绝碎片信息，死磕经典好书，内化大牛底层智慧。" "ai-native" "探索未来 AI 组织形态，寻找非技术同学的提效解法。" -}}
+        {{- $labels := dict "management" (slice "管理学思考" "组织进化笔记" "团队实战心得") "travel" (slice "日常观察" "实地调研" "旅行见闻") "books" (slice "系统读书笔记" "深度书评" "知识整理") "ai-native" (slice "AI组织形态" "智能体/工作流" "落地案例") -}}
+        {{- $titles := dict "management" "🌐 懂业务与团队管理" "travel" "🧭 走出去与看大千世界" "books" "🔍 读好书与记读书笔记" "ai-native" "🛠️ 智能组织与用好 AI" -}}
         {{- with $cat -}}
-          {{- $latest := index .Pages 0 -}}
+        <a class="zen-category-card" href="{{ .Permalink }}">
+          <h3>{{ index $titles .File.ContentBaseName }}</h3>
+          <p>{{ index $desc .File.ContentBaseName }}</p>
           {{- with $latest -}}
-          <article class="zen-pick-card">
-            <div class="pick-label">{{ $cat.Title }}</div>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-            <p class="pick-desc">{{ with .Description }}{{ . | plainify | truncate 80 }}{{ else }}{{ .Summary | plainify | truncate 80 }}{{ end }}</p>
-          </article>
+          <div class="zen-category-latest">
+            <span class="latest-label">最新 · {{ .Date.Format "2006.01.02" }}</span>
+            <span class="latest-title">{{ .Title }}</span>
+          </div>
           {{- end -}}
+          <div class="zen-badges">
+            {{- range index $labels .File.ContentBaseName -}}
+            <span class="zen-badge">{{ . }}</span>
+            {{- end -}}
+          </div>
+        </a>
         {{- end -}}
       {{- end -}}
     </div>
@@ -113,9 +83,11 @@
     <h2 class="zen-section-header" style="margin-top: 2rem; margin-bottom: 1rem; text-align: left; opacity: 1; color: var(--text-primary); font-size: 1rem;">📄 文章</h2>
     <ol class="zen-article-list zen-numbered fade-in">
       {{- range $i, $p := . }}
+      {{- $stats := partial "chinese_stats.html" $p }}
       <li>
         <span class="zen-num">{{ printf "%02d" (add $i 1) }}</span>
         <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
+        <div class="zen-meta">{{ $p.Date.Format "2006.01.02" }} · {{ $stats.readingTime }} min read</div>
       </li>
       {{- end }}
     </ol>
@@ -125,9 +97,11 @@
     <h2 class="zen-section-header" style="margin-top: 3rem; margin-bottom: 1rem; text-align: left; opacity: 1; color: var(--text-primary); font-size: 1rem;">📰 组织变革周报</h2>
     <ol class="zen-article-list zen-numbered fade-in">
       {{- range $i, $p := . }}
+      {{- $stats := partial "chinese_stats.html" $p }}
       <li>
         <span class="zen-num">{{ printf "%02d" (add $i 1) }}</span>
         <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
+        <div class="zen-meta">{{ $p.Date.Format "2006.01.02" }} · {{ $stats.readingTime }} min read</div>
       </li>
       {{- end }}
     </ol>
@@ -137,9 +111,11 @@
     {{- $paginator := .Paginate $sorted }}
     <ol class="zen-article-list zen-numbered fade-in">
       {{- range $i, $p := $paginator.Pages }}
+      {{- $stats := partial "chinese_stats.html" $p }}
       <li>
         <span class="zen-num">{{ printf "%02d" (add $i 1) }}</span>
         <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
+        <div class="zen-meta">{{ $p.Date.Format "2006.01.02" }} · {{ $stats.readingTime }} min read</div>
       </li>
       {{- end }}
     </ol>
