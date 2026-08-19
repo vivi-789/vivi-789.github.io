@@ -361,6 +361,72 @@ body::before {
   line-height: 1.4;
 }
 
+/* ==========================================================================
+   分类页顶部介绍卡片
+   ========================================================================== */
+
+.zen-category-hero {
+  margin: 24px 0 40px;
+}
+
+.zen-category-hero-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: color-mix(in srgb, var(--bg-secondary) 92%, transparent);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: var(--zen-shadow);
+}
+
+.zen-category-hero-icon {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: color-mix(in srgb, var(--brand-primary) 8%, transparent);
+  border-radius: 16px;
+}
+
+.zen-category-hero-content h1 {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  color: var(--brand-primary);
+  margin: 0 0 0.6rem;
+  line-height: 1.2;
+}
+
+.zen-category-hero-desc {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0 0 1rem;
+  max-width: 62ch;
+}
+
+@media (max-width: 560px) {
+  .zen-category-hero-card {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .zen-category-hero-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 1.6rem;
+    border-radius: 14px;
+  }
+
+  .zen-category-hero-content h1 {
+    font-size: 1.5rem;
+  }
+}
+
 .zen-badges {
   display: flex;
   flex-wrap: wrap;

@@ -58,11 +58,32 @@
     </div>
   </section>
 {{- else }}
+  {{- if eq .Data.Plural "categories" }}
+  <section class="zen-category-hero fade-in" aria-label="分类介绍">
+    <div class="zen-category-hero-card">
+      <div class="zen-category-hero-icon">{{ .Params.icon }}</div>
+      <div class="zen-category-hero-content">
+        <h1>{{ .Title }}</h1>
+        {{- if .Description }}
+        <p class="zen-category-hero-desc">{{ .Description }}</p>
+        {{- end }}
+        {{- with .Params.badges }}
+        <div class="zen-badges">
+          {{- range . }}
+          <span class="zen-badge">{{ . }}</span>
+          {{- end }}
+        </div>
+        {{- end }}
+      </div>
+    </div>
+  </section>
+  {{- else }}
   <header class="page-header fade-in">
     {{- partial "breadcrumbs.html" . }}
     <h1>{{ .Title }}</h1>
     {{- if .Description }}<div class="post-description">{{ .Description | markdownify }}</div>{{- end }}
   </header>
+  {{- end }}
   {{- if .Content }}
   <div class="post-content md-content fade-in">
     {{- if not (.Param "disableAnchoredHeadings") }}{{- partial "anchored_headings.html" .Content -}}{{- else }}{{ .Content }}{{ end }}
