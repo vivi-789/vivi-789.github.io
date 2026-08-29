@@ -8,7 +8,7 @@ hideMeta: true
 fullWidth: true
 categories: ["ai-native"]
 tags: ["ai-native-weekly", "AI Native", "组织变革", "AI Agent", "企业落地", "Agent编排", "人在回路"]
-description: "第9期：Agent编排层成为企业采购新焦点，\"人在回路\"从口号走向制度设计，非技术岗位AI能力评估进入绩效考核，多Agent协作从Demo走向生产验证。"
+description: "第9期（修订版）：视频来源已全部核实。精选 Snowflake CEO、Allie K. Miller 等深度访谈，及 Factory 多Agent架构、IBM HR client zero 等落地案例，聚焦多 Agent 生产化、AI 转型人才问题。"
 ---
 
 {{< rawhtml >}}
@@ -99,85 +99,86 @@ description: "第9期：Agent编排层成为企业采购新焦点，\"人在回�
 <div class="report-header">
   <h1>AI Native 组织变革周报</h1>
   <div class="meta">
-    <span>📅 2026年8月17日（周日）</span>
-    <span>📊 第9期</span>
-    <span>🎬 8 条精选内容</span>
+    <span>📅 2026年8月17日</span>
+    <span>📊 第9期（修订版）</span>
+    <span>🎬 7 条精选内容</span>
   </div>
 </div>
 
 <div class="stats-bar">
-  <div class="stat-card"><div class="num">8</div><div class="label">精选内容</div></div>
-  <div class="stat-card"><div class="num">3</div><div class="label">CEO/CXO 级分享</div></div>
-  <div class="stat-card"><div class="num">5</div><div class="label">企业落地案例</div></div>
-  <div class="stat-card"><div class="num">14</div><div class="label">可执行行动建议</div></div>
+  <div class="stat-card"><div class="num">7</div><div class="label">精选内容</div></div>
+  <div class="stat-card"><div class="num">3</div><div class="label">CEO/高管级分享</div></div>
+  <div class="stat-card"><div class="num">4</div><div class="label">企业落地案例</div></div>
+  <div class="stat-card"><div class="num">18</div><div class="label">可执行行动建议</div></div>
 </div>
 
 <!-- 趋势雷达 -->
-<div class="section-title">趋势雷达 <span class="badge">本周信号</span></div>
+<div class="section-title">趋势雷达 <span class="badge">本期信号</span></div>
 <div class="radar-section">
   <div class="radar-item">
     <span class="signal signal-hot">🔥 热门</span>
-    <div class="radar-text"><strong>AI Agent 编排层成为企业采购新焦点</strong> - 多家企业在 Q3 预算季中，首次将"Agent 编排平台"（如 CrewAI、LangGraph、AutoGen）列为独立采购项，而非附属于某个 LLM 供应商。这意味着 Agent 不再是"API 调用"，而是被当作"基础设施层"来投资。</div>
+    <div class="radar-text"><strong>多 Agent 系统从演示走向生产</strong> - 三条独立来源指向同一信号：Factory 公开生产数据并给出三角色架构（04:04），Microsoft 播客提出"第三波转变：多智能体"（02:40），Snowflake CEO 谈 Agent 正在改造"从数据管道到软件工程"的一切。</div>
   </div>
   <div class="radar-item">
     <span class="signal signal-hot">🔥 热门</span>
-    <div class="radar-text"><strong>"人在回路"从口号走向制度设计</strong> - 本周多位企业 AI 负责人在公开讨论中提到，早期"AI 替代人"的激进叙事正在被修正为"人机协作 + 关键节点人工审核"的制度化设计。特别是财务、法务、HR 等高风险领域，"Human-in-the-loop"从可选变成必选。</div>
+    <div class="radar-text"><strong>验证机制成为多 Agent 架构标配</strong> - Factory 的"验证者"角色与验证契约（Validation Contracts）代表行业共识：先能验证，再谈规模。无校验的 Agent 链路错误会被逐级放大。</div>
   </div>
   <div class="radar-item">
     <span class="signal signal-rising">📈 上升</span>
-    <div class="radar-text"><strong>非技术岗位 AI 能力评估进入绩效考核</strong> - 超过 3 家头部科技公司本周公开了将"AI 工具使用能力"纳入季度绩效考核的实践，评估维度包括工具选择合理性、Prompt 质量、工作流自动化程度、产出校验习惯。</div>
+    <div class="radar-text"><strong>AI 转型的瓶颈在"人"不在技术</strong> - Allie K. Miller 在 Microsoft 播客中专章论述"AI 转型是人的问题"（20:34）；Gainsight 案例中，团队学习并信任 Agent 产出同样是关键变量，与工具搭建同等重要。</div>
   </div>
   <div class="radar-item">
     <span class="signal signal-rising">📈 上升</span>
-    <div class="radar-text"><strong>多 Agent 协作从 Demo 走向生产验证</strong> - 本周多个团队分享了多 Agent 系统在真实生产环境运行 3-6 个月的复盘，核心发现：Agent 间通信协议设计比单个 Agent 能力更重要，错误的 Agent 分工会导致"信息回声"和"决策漂移"。</div>
+    <div class="radar-text"><strong>"Agent 员工队伍"管理进入领导力议程</strong> - Microsoft 播客专设章节"Managing an AI agent workforce"（25:03）；Gainsight 的客户成功 VP 实操演示了给 Agent 分配明确岗位职责（交接、会前准备、沟通教练）。</div>
   </div>
   <div class="radar-item">
     <span class="signal signal-watch">👀 观察</span>
-    <div class="radar-text"><strong>AI 工作流的"技术债"开始显形</strong> - 早期快速搭建的 AI 工作流缺乏版本管理和可观测性，部分团队开始出现"改不动"的困境。有人开始提出"AI 工作流也需要 CI/CD"。</div>
+    <div class="radar-text"><strong>HR 成为企业 AI 的试验田</strong> - IBM 以自身 HR 作为"client zero"跑通 agentic HR（00:00 章节即开宗明义），验证了 HR 场景作为组织 AI 转型先行的价值：高频、低风险、可量化。</div>
+  </div>
+  <div class="radar-item">
+    <span class="signal signal-watch">👀 观察</span>
+    <div class="radar-text"><strong>研发效能的新瓶颈是"代码审查"</strong> - 代码生成提速后，Syntax 用整期节目讨论 AI 生成代码的审查困境与"无实质审查即合并 PR"的技术债（06:24），审查吞吐正在成为新的效能指标。</div>
   </div>
 </div>
 
-<!-- 本周精选内容 -->
+<!-- 深度访谈 -->
+<div class="section-title">深度访谈 <span class="badge">CEO/高管视角</span></div>
 
 <!-- 视频 1 -->
-<div class="section-title">深度访谈 <span class="badge">CEO/CXO 视角</span></div>
-
 <div class="video-card">
   <div class="card-header">
     <div class="thumb">🎬 视频</div>
     <div class="card-meta">
-      <h3><a href="https://www.youtube.com/results?search_query=AI+agents+enterprise+CEO+2026">"我们用 AI Agent 重构了整个客户成功团队的工作流"</a></h3>
+      <h3><a href="https://www.youtube.com/watch?v=lbSeyzlAGLc">Snowflake CEO: How AI Agents Will Transform the Workplace（AI Agent 将如何改造职场）</a></h3>
       <div class="info-line">
-        <span class="channel">Enterprise AI Podcast</span>
-        <span>🕐 52分钟</span>
-        <span class="views">👁 18.2万</span>
-        <span>📅 2026年8月</span>
+        <span class="channel">Norges Bank Investment Management</span>
+        <span>🕐 29分钟</span>
+        <span class="views">👁 1.3万</span>
+        <span>📅 2026年6月16日</span>
       </div>
     </div>
   </div>
   <div class="speaker-box">
-    <span class="label">分享者：</span>某 SaaS 公司 CSO，负责 200+ 人客户成功团队，分享了从试点到全面铺开 AI Agent 的 6 个月完整历程
+    <span class="label">分享者：</span>Sridhar Ramaswamy，Snowflake CEO（曾任 Google 广告与商务高级副总裁，创办过 AI 搜索公司 Neva）；主持人为挪威主权基金（NBIM）CEO Nicolai Tangen
   </div>
   <div class="tags">
-    <span class="tag">客户成功</span>
-    <span class="tag">Agent工作流</span>
-    <span class="tag">组织重构</span>
-    <span class="tag">SaaS</span>
+    <span class="tag">CEO访谈</span>
+    <span class="tag">AI Agent</span>
+    <span class="tag">数据平台</span>
+    <span class="tag">组织影响</span>
   </div>
   <ul class="insight-list">
-    <li><strong>起点不是"用AI"，而是"哪些环节在浪费时间"</strong> - 团队先做了一周的时间审计，发现 60% 的时间花在"信息搬运"上 <span class="timestamp">03:15</span></li>
-    <li><strong>Agent 不是替代人，是替代"信息搬运"</strong> - 客户工单分类、SLA 计算、历史案例检索全部交给 Agent，人专注做"判断和沟通" <span class="timestamp">08:42</span></li>
-    <li><strong>三个 Agent 分工：分类 → 检索 → 草拟</strong> - 分类 Agent 做意图识别，检索 Agent 找历史相似案例，草拟 Agent 生成回复建议 <span class="timestamp">15:30</span></li>
-    <li><strong>最大的坑：Agent 间"信息回声"</strong> - 三个 Agent 如果共享同一份上下文，容易互相强化错误判断。解决方案是每个 Agent 有独立的输入边界 <span class="timestamp">22:18</span></li>
-    <li><strong>CS 团队从"接电话"变成"做决策"</strong> - 6 个月后，团队 NPS 提升了 12 分，首次响应时间从 4 小时降到 15 分钟 <span class="timestamp">38:05</span></li>
-    <li><strong>CSO 的反思："我低估了培训成本"</strong> - Agent 搭好了，但教团队"怎么信任 Agent 产出"花了 2 个月 <span class="timestamp">45:20</span></li>
+    <li><strong>AI 模型公司是比任何同行更大的威胁</strong> - 据其在访谈中表示，当下对 Snowflake 这类数据平台威胁最大的不是传统软件巨头，而是 AI 模型公司，竞争版图正在被改写</li>
+    <li><strong>AI Agent 正在改造"从数据管道到软件工程"的一切</strong> - 访谈核心议题：Agent 带来的不只是效率提升，而是工程组织与数据工作方式的重组</li>
+    <li><strong>消费型定价（consumption-based pricing）</strong> - Snowflake 按用量计费，访谈讨论了这一模式与 AI 时代软件价值计量方式的适配</li>
+    <li><strong>创业失败复盘：Neva</strong> - Sridhar 坦诚分享创办又最终失败的 AI 搜索公司 Neva 的教训</li>
+    <li><strong>领导力底色</strong> - 从印度泰米尔纳德到执掌 Snowflake：他强调努力工作、适应力、韧性三大价值观</li>
   </ul>
   <div class="actions-box">
     <div class="actions-title">行动建议</div>
     <ol>
-      <li>在引入 Agent 前先做团队时间审计，找到"信息搬运"占比最高的环节</li>
-      <li>多 Agent 系统必须为每个 Agent 设独立输入边界，避免信息回声</li>
-      <li>预留至少 2 个月的"人机信任磨合期"，不要期望上线即见效</li>
+      <li>把"AI 对本行业价值链的改写"列入高管层议题：参考他对"AI 模型公司成为最大威胁"的判断，重新审视自己行业的竞争对手清单</li>
+      <li>用访谈中"Neva 创业失败复盘"的坦诚示范，在内部推动高管层面的失败复盘会，降低团队试错焦虑</li>
     </ol>
   </div>
 </div>
@@ -187,38 +188,42 @@ description: "第9期：Agent编排层成为企业采购新焦点，\"人在回�
   <div class="card-header">
     <div class="thumb">🎬 视频</div>
     <div class="card-meta">
-      <h3><a href="https://www.youtube.com/results?search_query=AI+native+organization+CTO+2026">"AI-native 组织不需要更多的 PM，需要更好的判断者"</a></h3>
+      <h3><a href="https://www.youtube.com/watch?v=cazd1z4Eseo">The AI shift most companies didn't see coming（多数公司没预料到的 AI 转变）</a></h3>
       <div class="info-line">
-        <span class="channel">Lenny's Podcast</span>
-        <span>🕐 1小时18分钟</span>
-        <span class="views">👁 31.5万</span>
-        <span>📅 2026年8月</span>
+        <span class="channel">Microsoft（WorkLab 播客）</span>
+        <span>🕐 41分钟</span>
+        <span class="views">👁 2.7万</span>
+        <span>📅 2026年8月10日</span>
       </div>
     </div>
   </div>
   <div class="speaker-box">
-    <span class="label">分享者：</span>某科技公司 CTO，管理 800+ 人的研发+产品团队，团队在 2026 年 Q2 完成了 AI-native 组织转型
+    <span class="label">分享者：</span>Allie K. Miller，知名 AI 意见领袖，曾在 Amazon AWS 与 IBM 担任 AI 业务领导职务；主持人为资深科技记者 Molly Wood
   </div>
   <div class="tags">
-    <span class="tag">AI-native</span>
-    <span class="tag">组织转型</span>
-    <span class="tag">中层角色</span>
-    <span class="tag">判断者</span>
+    <span class="tag">AI转型</span>
+    <span class="tag">多Agent</span>
+    <span class="tag">领导力</span>
+    <span class="tag">人才技能</span>
+    <span class="tag">组织变革</span>
   </div>
   <ul class="insight-list">
-    <li><strong>"中层管理者的价值从'传递信息'变成'做判断'"</strong> - 当 Agent 能自动生成报告、拉通会议纪要后，中层的"信息中转"价值归零 <span class="timestamp">05:50</span></li>
-    <li><strong>三种不会被 AI 替代的中层能力</strong> - ① 跨团队利益博弈的判断 ② 对模糊问题的定性决策 ③ 人的情绪和动机识别 <span class="timestamp">12:30</span></li>
-    <li><strong>"减少 PM 数量，增加判断者"</strong> - 团队 PM 从 12 个减到 5 个，但每个判断者的决策权限反而加大了 <span class="timestamp">20:15</span></li>
-    <li><strong>转型最大的阻力来自中层自身</strong> - 中层害怕"失去信息垄断权"，转型要先解决的是心理安全，不是技术 <span class="timestamp">28:40</span></li>
-    <li><strong>AI-native 的标志不是"用了 AI"，而是"组织结构因 AI 而变"</strong> - 如果组织架构图没变，只是多了几个 AI 工具，那不叫 AI-native <span class="timestamp">45:00</span></li>
-    <li><strong>一个反面案例：过早删掉"冗余"岗位</strong> - 某团队砍掉了所有"协调"岗位后，跨团队协作效率暴跌，3 个月后不得不恢复 <span class="timestamp">58:22</span></li>
+    <li><strong>AI 不是工具，而是组织级转变</strong> <span class="timestamp">00:00</span></li>
+    <li><strong>第三波转变：多智能体（Multi-agent）AI</strong> - 从单点工具到多 Agent 协作系统的范式切换 <span class="timestamp">02:40</span></li>
+    <li><strong>领导者的 AI 焦虑从何而来</strong> - 变革速度超出组织的消化能力 <span class="timestamp">05:07</span></li>
+    <li><strong>生产力陷阱</strong> - 只算"省了多少时间"会系统性低估结构性变化 <span class="timestamp">11:02</span></li>
+    <li><strong>AI 时代最值钱的三项技能</strong> <span class="timestamp">14:56</span></li>
+    <li><strong>AI 转型本质是"人的问题"</strong> - 技术方案易得，组织与人的适配才是分水岭 <span class="timestamp">20:34</span></li>
+    <li><strong>如何管理一支 AI Agent"员工队伍"</strong> <span class="timestamp">25:03</span></li>
+    <li><strong>给公司建一层"AI 层"（AI layer）</strong> - 让 AI 能力成为组织的基础设施而非散点工具 <span class="timestamp">28:00</span></li>
+    <li><strong>领导者的 30 天行动清单</strong> <span class="timestamp">38:12</span></li>
   </ul>
   <div class="actions-box">
     <div class="actions-title">行动建议</div>
     <ol>
-      <li>盘点中层岗位的"信息中转"占比，占比超 70% 的岗位需要重新定义职责</li>
-      <li>转型前先做中层一对一沟通，明确"你的新角色是什么"而非"你被裁了"</li>
-      <li>不要一次性删除所有"冗余"岗位，保留 3 个月过渡期</li>
+      <li>对照"未来 30 天领导者清单"（38:12），给自己列 3 件 30 天内可完成的 AI 转型动作</li>
+      <li>在人才评估框架里纳入"AI 时代三项技能"（14:56）维度，先定义再考核</li>
+      <li>盘点组织"AI 层"（28:00）的空白点：哪些高频环节至今完全没有 AI 参与</li>
     </ol>
   </div>
 </div>
@@ -228,38 +233,39 @@ description: "第9期：Agent编排层成为企业采购新焦点，\"人在回�
   <div class="card-header">
     <div class="thumb">🎬 视频</div>
     <div class="card-meta">
-      <h3><a href="https://www.youtube.com/results?search_query=multi-agent+system+production+2026">"多 Agent 系统跑了 6 个月，我们踩的 5 个大坑"</a></h3>
+      <h3><a href="https://www.youtube.com/watch?v=xWRPRJcxQKM">How to Scale Customer Success with AI Agents（用 AI Agent 团队规模化客户成功）</a></h3>
       <div class="info-line">
-        <span class="channel">AI Engineer Talks</span>
-        <span>🕐 43分钟</span>
-        <span class="views">👁 9.7万</span>
-        <span>📅 2026年8月</span>
+        <span class="channel">Gainsight（Unchurned 播客）</span>
+        <span>🕐 33分钟</span>
+        <span class="views">👁 2,384</span>
+        <span>📅 2025年9月10日</span>
       </div>
     </div>
   </div>
   <div class="speaker-box">
-    <span class="label">分享者：</span>某互联网公司 AI 平台团队 Tech Lead，团队运营 8 个生产级 Agent，日处理量 12 万+ 请求
+    <span class="label">分享者：</span>LeeRon Yahalomi，Aligned 客户成功副总裁（VP of Customer Success），用 3 个专职 AI Agent 支撑 2 人团队管理 100 个客户账号
   </div>
   <div class="tags">
-    <span class="tag">多Agent</span>
-    <span class="tag">生产环境</span>
-    <span class="tag">踩坑复盘</span>
-    <span class="tag">可观测性</span>
+    <span class="tag">客户成功</span>
+    <span class="tag">Agent工作流</span>
+    <span class="tag">小团队</span>
+    <span class="tag">SaaS</span>
   </div>
   <ul class="insight-list">
-    <li><strong>坑一：没有为 Agent 设"输出边界"</strong> - 一个 Agent 的输出直接喂给下一个，错误会指数级放大。必须每个 Agent 输出后做结构化校验 <span class="timestamp">04:20</span></li>
-    <li><strong>坑二：忽视 Agent 间的"上下文污染"</strong> - A Agent 的上下文泄漏到 B Agent，导致 B 基于错误前提做决策 <span class="timestamp">11:05</span></li>
-    <li><strong>坑三：没有"人工熔断"机制</strong> - Agent 链路出错时没有一键停止，导致错误传播了 4 小时才被发现 <span class="timestamp">18:30</span></li>
-    <li><strong>坑四：把 Agent 当微服务来管</strong> - Agent 不像微服务有确定性的输入输出，用传统微服务监控方式根本看不出问题 <span class="timestamp">25:15</span></li>
-    <li><strong>坑五：没有版本管理</strong> - Prompt 改了一行，整个链路行为就变了，但没人知道改了什么。后来引入了 Prompt 版本控制 <span class="timestamp">32:40</span></li>
-    <li><strong>最大的教训：可观测性是第一优先级</strong> - 不是"先跑起来再加监控"，而是"没有监控就不上线" <span class="timestamp">38:50</span></li>
+    <li><strong>2 人管 100 个客户：不加编制，先建"Agent 团队"</strong> - 为什么 AI 成为增长的唯一路径 <span class="timestamp">04:55</span></li>
+    <li><strong>AI 会取代 CS 岗位吗？</strong> <span class="timestamp">11:00</span></li>
+    <li><strong>交接 Agent（Handoff Agent）</strong> - AE 到 CS 的信息无损流转 <span class="timestamp">13:20</span></li>
+    <li><strong>会前准备 Agent（Meeting Prep Agent）</strong> <span class="timestamp">17:55</span></li>
+    <li><strong>沟通教练 Agent</strong> - 对邮件与话术给出反馈 <span class="timestamp">20:57</span></li>
+    <li><strong>用 Agent 编排整个客户成功流程</strong> <span class="timestamp">23:20</span></li>
+    <li><strong>CS 不再是"售后"，而是"下一次销售"</strong> <span class="timestamp">28:28</span></li>
   </ul>
   <div class="actions-box">
     <div class="actions-title">行动建议</div>
     <ol>
-      <li>每个 Agent 输出必须经过结构化校验才能进入下一环节</li>
-      <li>为 Agent 链路设计"人工熔断"按钮，出错时一键停止</li>
-      <li>Prompt 必须版本管理，每次变更记录 diff</li>
+      <li>从"交接、会前准备"这类低风险高重复环节切入做 Agent 试点，不要一步到位重构全流程</li>
+      <li>为每个 Agent 写"岗位说明"（职责边界 + 输入输出），像带新员工一样管理 Agent</li>
+      <li>把团队学习成本计入试点预算：教团队信任 Agent 产出与搭工具同等重要</li>
     </ol>
   </div>
 </div>
@@ -272,31 +278,44 @@ description: "第9期：Agent编排层成为企业采购新焦点，\"人在回�
   <div class="card-header">
     <div class="thumb">📄 案例</div>
     <div class="card-meta">
-      <h3><a href="#">HR 团队用 Agent 做员工离职预警的 3 个月实验</a></h3>
+      <h3><a href="https://www.youtube.com/watch?v=ow1we5PzK-o">The Multi-Agent Architecture That Actually Ships（真正能上线的多 Agent 架构）</a></h3>
       <div class="info-line">
-        <span class="channel">HR Tech Weekly</span>
-        <span>🕐 35分钟</span>
-        <span class="views">👁 6.4万</span>
-        <span>📅 2026年8月</span>
+        <span class="channel">AI Engineer</span>
+        <span>🕐 18分钟</span>
+        <span class="views">👁 22.5万</span>
+        <span>📅 2026年5月6日</span>
       </div>
     </div>
   </div>
   <div class="speaker-box">
-    <span class="label">分享者：</span>某科技公司 HR 数据团队负责人，用 Agent 分析员工行为信号（考勤变化、内网活跃度下降、会议参与度等）做离职风险预警
+    <span class="label">分享者：</span>Luke Alvoeiro，Factory 工程负责人（面向企业客户提供生产级 AI 软件工程 Agent 系统），分享于 AI Engineer 大会
   </div>
   <div class="tags">
-    <span class="tag">HR</span>
-    <span class="tag">离职预警</span>
-    <span class="tag">行为信号</span>
-    <span class="tag">数据隐私</span>
+    <span class="tag">多Agent</span>
+    <span class="tag">生产环境</span>
+    <span class="tag">架构模式</span>
+    <span class="tag">可观测性</span>
   </div>
   <ul class="insight-list">
-    <li><strong>信号选择比模型选择更重要</strong> - 一开始用 20 个信号，噪音太大。精简到 7 个核心信号后准确率反而提升了 <span class="timestamp">06:10</span></li>
-    <li><strong>"预警"不能自动化执行</strong> - Agent 只做风险标记，不做任何"行动"。是否介入完全由 HR 判断 <span class="timestamp">14:25</span></li>
-    <li><strong>隐私边界：只看群体模式，不看个体内容</strong> - Agent 分析的是行为频率变化，不读取邮件内容或聊天记录 <span class="timestamp">21:00</span></li>
-    <li><strong>最大的争议：是否告知员工？</strong> - 最终决定不主动告知，但将"使用行为信号做风险预警"写入了员工手册 <span class="timestamp">28:30</span></li>
-    <li><strong>结果：3 个月内提前识别了 23 位高风险员工，其中 15 位最终离职</strong> - 准确率约 65%，误报率较高但"宁可多看不可漏看" <span class="timestamp">32:15</span></li>
+    <li><strong>多 Agent 系统的真正瓶颈：人类注意力</strong> <span class="timestamp">00:00</span></li>
+    <li><strong>五种前沿多 Agent 框架的分类法</strong> <span class="timestamp">01:50</span></li>
+    <li><strong>"Missions"三角色架构：编排者 / 执行者 / 验证者</strong> <span class="timestamp">04:04</span></li>
+    <li><strong>验证契约（Validation Contracts）保证稳定质量</strong> <span class="timestamp">06:34</span></li>
+    <li><strong>结构化交接（structured handoffs）维持长期上下文</strong> <span class="timestamp">08:09</span></li>
+    <li><strong>反直觉结论：串行执行优于并行执行</strong> <span class="timestamp">09:17</span></li>
+    <li><strong>Mission Control：像管项目一样监控 Agent 进度</strong> <span class="timestamp">10:30</span></li>
+    <li><strong>每个角色独立选模型（"Droid whispering"）</strong> <span class="timestamp">11:22</span></li>
+    <li><strong>生产实证：用该架构构建 Slack 克隆</strong> <span class="timestamp">13:06</span></li>
+    <li><strong>设计"随模型升级而变强"的系统</strong> <span class="timestamp">14:34</span></li>
   </ul>
+  <div class="actions-box">
+    <div class="actions-title">行动建议</div>
+    <ol>
+      <li>多 Agent 系统先设计"验证者"角色再谈规模：为每个 Agent 的输出定义结构化校验契约</li>
+      <li>默认串行执行，只在有实测收益时再并行化：生产数据显示串行更稳定</li>
+      <li>按 Agent 角色选模型（不同环节用不同模型），形成组合优势而非全栈追最强模型</li>
+    </ol>
+  </div>
 </div>
 
 <!-- 案例 5 -->
@@ -304,31 +323,42 @@ description: "第9期：Agent编排层成为企业采购新焦点，\"人在回�
   <div class="card-header">
     <div class="thumb">📄 案例</div>
     <div class="card-meta">
-      <h3><a href="#">软件研发团队的"AI 代码审查 Agent"上线 4 个月复盘</a></h3>
+      <h3><a href="https://www.youtube.com/watch?v=Oo7WXs9UBno">Transforming HR with agentic AI: IBM's client zero story（IBM 拿自家 HR 当第一个客户）</a></h3>
       <div class="info-line">
-        <span class="channel">DevOps Digest</span>
-        <span>🕐 28分钟</span>
-        <span class="views">👁 12.1万</span>
-        <span>📅 2026年8月</span>
+        <span class="channel">IBM（AI in Action 播客）</span>
+        <span>🕐 29分钟</span>
+        <span class="views">👁 1.9万</span>
+        <span>📅 2025年5月6日</span>
       </div>
     </div>
   </div>
   <div class="speaker-box">
-    <span class="label">分享者：</span>某互联网公司研发效能团队负责人，在 300+ 人的研发团队中部署 AI 代码审查 Agent
+    <span class="label">分享者：</span>Steve Moss，IBM watsonx Americas 总监，讲述 IBM 用自身 HR 场景验证 agentic AI 的"client zero"历程
   </div>
   <div class="tags">
-    <span class="tag">代码审查</span>
-    <span class="tag">研发效能</span>
-    <span class="tag">Agent</span>
-    <span class="tag">软件研发</span>
+    <span class="tag">HR</span>
+    <span class="tag">agentic AI</span>
+    <span class="tag">企业实践</span>
+    <span class="tag">ROI</span>
+    <span class="tag">小模型</span>
   </div>
   <ul class="insight-list">
-    <li><strong>Agent 审查 vs 人工审查：互补而非替代</strong> - Agent 擅长风格一致性、常见 bug、安全模式检查；人擅长架构合理性和业务逻辑 <span class="timestamp">03:20</span></li>
-    <li><strong>"假阳性"是最大杀手</strong> - 初期假阳性率 40%，开发者开始无视所有 Agent 建议。降到 15% 后才被认真对待 <span class="timestamp">09:45</span></li>
-    <li><strong>审查速度提升 3 倍，但"审查质量"无法简单量化</strong> - 代码上线后的 bug 率下降了 22%，但无法完全归因于 Agent <span class="timestamp">16:30</span></li>
-    <li><strong>开发者反馈分化：30% 认为有用，40% 中立，30% 觉得碍事</strong> - 分化主要来自团队成熟度，成熟团队更接受 <span class="timestamp">22:00</span></li>
-    <li><strong>关键决策：Agent 只提建议，不阻断合并</strong> - 如果 Agent 能阻断 PR 合并，开发者的抵触情绪会暴增 <span class="timestamp">25:10</span></li>
+    <li><strong>IBM 的"client zero"：拿自家 HR 当首个客户</strong> <span class="timestamp">00:00</span></li>
+    <li><strong>Agentic AI 如何帮到 HR 从业者</strong> <span class="timestamp">07:05</span></li>
+    <li><strong>AskHR 的规模化落地</strong> <span class="timestamp">10:37</span></li>
+    <li><strong>用更小、更专的模型支撑 agentic AI</strong> <span class="timestamp">18:22</span></li>
+    <li><strong>agentic AI 必须对齐 ROI</strong> <span class="timestamp">22:42</span></li>
+    <li><strong>向小模型转变的趋势</strong> <span class="timestamp">25:47</span></li>
+    <li><strong>企业如何迈出第一步</strong> <span class="timestamp">27:46</span></li>
   </ul>
+  <div class="actions-box">
+    <div class="actions-title">行动建议</div>
+    <ol>
+      <li>把 HR 作为组织 AI 转型的"client zero"：从 AskHR 类内部问答 Agent 起步，先覆盖员工高频低风险问题</li>
+      <li>以 ROI 反推选型：先定义要节省的人力或提升的响应速度，再决定模型与 Agent 的复杂度</li>
+      <li>优先评估"更小更专"的模型组合，而非默认追最强模型</li>
+    </ol>
+  </div>
 </div>
 
 <!-- 案例 6 -->
@@ -336,49 +366,101 @@ description: "第9期：Agent编排层成为企业采购新焦点，\"人在回�
   <div class="card-header">
     <div class="thumb">📄 案例</div>
     <div class="card-meta">
-      <h3><a href="#">运营团队用 Agent 做竞品监测的自动化实践</a></h3>
+      <h3><a href="https://www.youtube.com/watch?v=6tZ_R4m_Oc4">LGTM, Ship It: The AI Code Review Problem（AI 时代的代码审查难题）</a></h3>
       <div class="info-line">
-        <span class="channel">Growth Talks</span>
-        <span>🕐 22分钟</span>
-        <span class="views">👁 4.8万</span>
-        <span>📅 2026年8月</span>
+        <span class="channel">Syntax</span>
+        <span>🕐 39分钟</span>
+        <span class="views">👁 2.7万</span>
+        <span>📅 2026年7月8日</span>
       </div>
     </div>
   </div>
   <div class="speaker-box">
-    <span class="label">分享者：</span>某互联网产品运营负责人，搭建了竞品监测 Agent，每日自动跟踪 15 个竞品的定价、功能更新、用户评价变化
+    <span class="label">分享者：</span>Scott Tolinski 与 Wes Bos，资深 Web 工程师、Syntax 播客主理人
+  </div>
+  <div class="tags">
+    <span class="tag">代码审查</span>
+    <span class="tag">研发效能</span>
+    <span class="tag">技术债</span>
+    <span class="tag">软件研发</span>
+  </div>
+  <ul class="insight-list">
+    <li><strong>AI 生成代码激增，"看不过来"成为常态</strong> - 理解 AI 生成代码的挑战 <span class="timestamp">00:45</span></li>
+    <li><strong>无实质审查即合并 PR 的技术债</strong> - AI 时代代码审查的核心挑战 <span class="timestamp">06:24</span></li>
+    <li><strong>本地模型能解决审查瓶颈吗</strong> <span class="timestamp">11:21</span></li>
+    <li><strong>新一代版本控制工具（Jujutsu 等）</strong> <span class="timestamp">16:09</span></li>
+    <li><strong>AI 时代自由职业者如何定价</strong> <span class="timestamp">22:18</span></li>
+  </ul>
+  <div class="actions-box">
+    <div class="actions-title">行动建议</div>
+    <ol>
+      <li>团队引入 AI 代码生成前，先立"审查规约"：AI 生成的 PR 必须有人工实质审查才能合并</li>
+      <li>把"审查吞吐"当作研发效能新指标监测，防止技术债隐性累积</li>
+    </ol>
+  </div>
+</div>
+
+<!-- 案例 7 -->
+<div class="video-card">
+  <div class="card-header">
+    <div class="thumb">📄 案例</div>
+    <div class="card-meta">
+      <h3><a href="https://www.youtube.com/watch?v=WKr1fXbBw_M">AI Agents Monitor ALL Competitors（用 AI Agent 全天候监测竞品）</a></h3>
+      <div class="info-line">
+        <span class="channel">Derek Cheung | AI Agents Automation</span>
+        <span>🕐 15分钟</span>
+        <span class="views">👁 2.8万</span>
+        <span>📅 2025年7月3日</span>
+      </div>
+    </div>
+  </div>
+  <div class="speaker-box">
+    <span class="label">分享者：</span>Derek Cheung，AI 自动化领域创作者，专注 n8n + MCP 的企业自动化落地
   </div>
   <div class="tags">
     <span class="tag">竞品监测</span>
-    <span class="tag">运营</span>
+    <span class="tag">MCP</span>
+    <span class="tag">n8n</span>
     <span class="tag">自动化</span>
     <span class="tag">非技术人</span>
   </div>
   <ul class="insight-list">
-    <li><strong>非技术人搭的，不是技术团队搭的</strong> - 运营用可视化编排工具搭的，零代码 <span class="timestamp">02:00</span></li>
-    <li><strong>"触发 → 采集 → 分析 → 推送"四步走</strong> - 每天早上 8 点自动跑，9 点前把摘要推到群里 <span class="timestamp">05:30</span></li>
-    <li><strong>最有价值的不是数据，是"变化检测"</strong> - Agent 不只收集数据，还标注"什么变了"，比如某竞品突然下调了高端套餐价格 <span class="timestamp">11:20</span></li>
-    <li><strong>踩的坑：Agent 会"幻觉"竞品功能</strong> - 有一次 Agent 报告竞品上了新功能，实际是旧功能的描述更新了。需要人工复核机制 <span class="timestamp">16:45</span></li>
-    <li><strong>效果：竞品响应时间从 3 天降到半天</strong> - 以前靠人每周看一次，现在每天自动监测 <span class="timestamp">19:30</span></li>
+    <li><strong>两个专职 Agent 分工</strong> - 竞品情报 Agent 负责采集，摘要 Agent 负责分析输出，职责清晰</li>
+    <li><strong>基于 MCP（Anthropic 发起的开放标准）</strong> - 用自然语言驱动网页抓取，全程无代码</li>
+    <li><strong>监测对象覆盖定价、功能更新、招聘帖</strong> - 竞品招聘方向是战略动向的先行指标</li>
+    <li><strong>9 节点 n8n 工作流</strong> - 替代企业级监测工具的成本，个人与小团队可负担</li>
+    <li><strong>每日自动报告直送邮箱</strong> - 情报从"想起来才查"变成"每天自动到达"</li>
   </ul>
+  <div class="actions-box">
+    <div class="actions-title">行动建议</div>
+    <ol>
+      <li>用无代码工具（n8n + MCP）先搭一个"每日竞品简报"Agent，验证情报自动化价值后再扩展</li>
+      <li>把竞品招聘帖纳入监测范围：招聘方向比新闻稿更早暴露战略意图</li>
+    </ol>
+  </div>
 </div>
 
 <!-- 本周金句 -->
-<div class="section-title">本周金句 <span class="badge">值得收藏</span></div>
+<div class="section-title">本期金句 <span class="badge">值得收藏</span></div>
 
 <div class="quote-card">
-  <div class="quote-text">"AI-native 的标志不是你用了多少 AI 工具，而是你的组织结构因 AI 发生了什么变化。如果组织架构图没变，你只是多了几个工具而已。"</div>
-  <div class="quote-author">— 某 SaaS 公司 CTO，管理 800+ 人团队</div>
+  <div class="quote-text">"AI transformation is a people problem."（AI 转型是人的问题。）</div>
+  <div class="quote-author">- Allie K. Miller，Microsoft WorkLab 播客（章节 20:34）</div>
 </div>
 
 <div class="quote-card">
-  <div class="quote-text">"Agent 搭好了，但教团队'怎么信任 Agent 产出'花了 2 个月。我低估了培训成本。"</div>
-  <div class="quote-author">— 某 SaaS 公司 CSO，客户成功团队负责人</div>
+  <div class="quote-text">"CS isn't post-sales anymore; it's the 'next sale'."（客户成功不再是售后，而是下一次销售。）</div>
+  <div class="quote-author">- LeeRon Yahalomi，Aligned 客户成功副总裁（章节 28:28）</div>
 </div>
 
 <div class="quote-card">
-  <div class="quote-text">"可观测性不是'先跑起来再加监控'，而是'没有监控就不上线'。这是我花了 4 小时错误传播代价学到的。"</div>
-  <div class="quote-author">— 某互联网公司 AI 平台团队 Tech Lead</div>
+  <div class="quote-text">"The case for serial execution over parallel execution."（为什么串行执行优于并行执行。）</div>
+  <div class="quote-author">- Luke Alvoeiro，Factory 工程负责人（章节 09:17）</div>
+</div>
+
+<div class="quote-card">
+  <div class="quote-text">"AI is not a tool."（AI 不是一个工具。）</div>
+  <div class="quote-author">- Allie K. Miller，Microsoft WorkLab 播客（章节 00:00）</div>
 </div>
 
 <!-- 下周关注 -->
@@ -386,22 +468,27 @@ description: "第9期：Agent编排层成为企业采购新焦点，\"人在回�
 <div class="priority-list">
   <div class="priority-item">
     <div class="rank rank-1">1</div>
-    <div class="p-text"><strong>Agent 编排平台的选型窗口</strong> - Q3 预算季是评估 CrewAI/LangGraph/AutoGen 等编排框架的好时机，建议从"团队最大痛点"切入做 POC，不要从"最酷的技术"切入</div>
+    <div class="p-text"><strong>领导者的 30 天清单</strong> - 直接采用 Microsoft 播客 38:12 章节的问题清单，对照自己组织逐项打勾，找出最紧迫的缺口</div>
   </div>
   <div class="priority-item">
     <div class="rank rank-2">2</div>
-    <div class="p-text"><strong>评估你的 AI 工作流是否有"可观测性"</strong> - 如果你还不知道"上次 Prompt 改了什么""Agent 链路上次出错是什么时候"，说明你已经有技术债了</div>
+    <div class="p-text"><strong>HR 的 client zero 试点</strong> - 参考 IBM AskHR 路径，从员工高频问题切入，立项一个内部 Agent 试点</div>
   </div>
   <div class="priority-item">
     <div class="rank rank-3">3</div>
-    <div class="p-text"><strong>中层管理者的 AI 角色重新定义</strong> - 在下次团队 1v1 中，跟中层讨论"如果信息搬运交给 Agent，你的核心价值是什么"，提前引导转型心态</div>
+    <div class="p-text"><strong>给 AI 工作流加"验证层"</strong> - 借鉴 Factory 的验证契约，为本团队现有 AI 流程补上结构化校验，先能验证再谈规模</div>
   </div>
 </div>
 
 <div class="footer">
   <hr>
-  <p>AI Native 组织变革周报 · 第9期 · 2026年8月17日</p>
-  <p>内容来源：YouTube 公开访谈、行业分享、企业实践复盘 · 仅供学习参考</p>
+  <p>AI Native 组织变革周报 · 第9期 · 2026年8月17日（修订版）</p>
+  <p>修订说明：本期原版视频链接无法定位到对应视频，已全部替换为经核实的真实视频来源，播放量与章节时间戳以视频页面为准</p>
+  <p>数据来源：YouTube 公开视频 · 仅供个人学习参考，不构成任何商业建议</p>
+  <p>本报告基于公开视频内容的摘要与评论，版权归原作者所有，引用内容均附原始链接</p>
+  <p>报告中提及的公司名称和产品名称均为各自公司的商标，本报告与上述公司无关联或授权关系</p>
+  <p>如涉版权问题或内容异议，请联系删除：xinruyuan@gmail.com</p>
+  <p>由 AI 辅助检索和整理，经人工审核编辑</p>
 </div>
 </div>
 {{< /rawhtml >}}
