@@ -1,0 +1,85 @@
+---
+title: "今日好书推荐：《组织能力的杨三角》"
+slug: "组织能力的杨三角"
+date: 2026-08-16T10:00:00+08:00
+draft: false
+tags: ['读书笔记', '书籍推荐']
+categories: ["books"]
+description: "为什么同一个人，换了一家公司就判若两人？因为战斗力从来不属于个人，而属于组织--杨国安用一个三角形，讲清了战略落地的最后一公里。"
+images: ["/images/books/2026-08-16_组织能力的杨三角.png"]
+---
+
+<style>
+
+/* ========================================================================== 1. 核心设计系统 (Design System) & 纸张感配色 ========================================================================== */:root { --bg-primary: #F4F1EA; /* 温润燕麦色底色，极其护眼 */ --bg-secondary: #F9F6F0; /* 稍微亮一点的纸张色，用于摘要块和主旨 */ --text-primary: #2C2C2C; /* 碳灰正文 */ --text-secondary: #777777; /* 次要元信息 */ --brand-primary: #1C355E; /* 学院蓝 (用于 H2 标题和核心强调) */ --brand-secondary: #2E4A3F; /* 黛绿色 (用于 H3 标题和列表点缀) */ --border-color: #E2DDD5; /* 低对比度分割线 */ --font-serif: ui-serif, Georgia, "Cambria", "Times New Roman", "Noto Serif SC", "思源宋体", serif; --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", Roboto, sans-serif; } /* ========================================================================== 2. 全局基础重置与紧凑的阅读呼吸感 ========================================================================== */ body { background-color: var(--bg-primary); color: var(--text-primary); font-family: var(--font-sans); margin: 0; padding: 40px 20px; display: flex; justify-content: center; -webkit-font-smoothing: antialiased; } /* 严格锁死 650px 黄金阅读宽度 */.page { max-width: none;  width: 100%; } /* ========================================================================== 3. 头部卡片与主旨框架优化（抹去臃肿边框，融入纸张底色） ========================================================================== */ header { margin-bottom: 2rem; padding: 0!important; background: transparent!important; border: none!important; box-shadow: none!important; } /* 文章大标题 */ h1 { font-family: var(--font-serif); font-size: 2.2rem!important; line-height: 1.3!important; color: var(--brand-primary); margin: 0 0 1.5rem 0; font-weight: 700; letter-spacing: -0.02em; } /* 顶部的 Hook 摘要框：无缝接入极简纸张色 */.hook { background-color: var(--bg-secondary)!important; border-left: 4px solid var(--brand-primary)!important; border-top: none!important; border-right: none!important; border-bottom: none!important; padding: 1.1rem 1.35rem!important; margin-bottom: 2rem!important; border-radius: 0 6px 6px 0!important; font-family: var(--font-sans)!important; font-size: 16px!important; line-height: 1.6!important; color: #4A4A4A!important; } /* ========================================================================== 4. 正文排版系统 (行高锁死 1.65，间距收紧到 1.05rem，两端对齐) ========================================================================== */ p { font-size: 16.5px!important; line-height: 1.65!important; margin-top: 0!important; margin-bottom: 1.05rem!important; /* 极致紧凑 */ text-align: justify; text-justify: inter-character; color: var(--text-primary)!important; } strong { color: #000!important; font-weight: 600!important; } /* 学术大刊风格的 H2 标题（移除生硬粗边框，改为优雅下划线） */ h2 { font-family: var(--font-serif)!important; font-size: 1.45rem!important; color: var(--brand-primary)!important; margin-top: 2.5rem!important; margin-bottom: 1rem!important; padding-left: 0!important; padding-bottom: 0.4rem!important; border-left: none!important; border-bottom: 1px solid var(--border-color)!important; } /* H3 标题转换成内敛黛绿色 */ h3 { font-family: var(--font-serif)!important; font-size: 1.2rem!important; color: var(--brand-secondary)!important; margin-top: 1.75rem!important; margin-bottom: 0.7rem!important; } /* 案例展示区优化：降级为精致的弱对比纸张字块 */.example { padding: 0.85rem 1.1rem!important; margin: 0.9rem 0 1.1rem 0!important; background-color: var(--bg-secondary)!important; border-left: 2px solid var(--border-color)!important; border-top: none!important; border-right: none!important; border-bottom: none!important; border-radius: 0!important; font-size: 15.5px!important; }.example p { margin-bottom: 0!important; } /* 正文内的普通引用块：靠左边线识别 */ blockquote { margin: 1.2rem 0!important; padding: 0.75rem 1.1rem!important; border-left: 3px solid var(--brand-secondary)!important; border-top: none!important; border-right: none!important; border-bottom: none!important; border-radius: 0!important; color: #555!important; font-family: var(--font-serif)!important; background: transparent!important; } blockquote p { margin: 0!important; font-size: 16px!important; } /* 延伸思考：精细化无边框阿拉伯数字序列（消灭大红橘色实心圆圈） */ ol.reflection { list-style: none!important; counter-reset: item; margin: 1rem 0 0 0!important; padding-left: 0!important; } ol.reflection li { counter-increment: item; position: relative; padding-left: 1.5rem!important; margin-bottom: 0.6rem!important; font-size: 16px!important; line-height: 1.6!important; color: var(--text-primary)!important; } ol.reflection li::before { content: counter(item) "."!important; position: absolute; left: 0; top: 0!important; width: auto!important; height: auto!important; border-radius: 0!important; background: transparent!important; color: var(--brand-primary)!important; font-size: 16px!important; line-height: inherit!important; text-align: left!important; font-weight: 700!important; font-family: var(--font-serif)!important; } /* 页脚极其克制淡雅 */.footer { margin-top: 3rem!important; padding-top: 1.2rem!important; border-top: 1px solid var(--border-color)!important; }.footer p { margin-bottom: 0.35rem!important; color: var(--text-secondary)!important; font-size: 0.9rem!important; line-height: 1.6!important; }.footer.label { color: var(--text-primary)!important; font-weight: 600!important; }
+
+</style>
+<main class="page">
+    <header>
+      <h1>今日好书推荐（博客文案）：《组织能力的杨三角》</h1>
+      <div class="hook">为什么同一个人，换了一家公司就判若两人？因为战斗力从来不属于个人，而属于组织--杨国安用一个三角形，讲清了战略落地的最后一公里。</div>
+    </header>
+
+    <section>
+      <h2>一句话种草</h2>
+      <p>你以为公司做不大是因为招不到牛人，其实是因为牛人进来之后被"腌"成了普通人。《组织能力的杨三角》戳破了一个多数管理者的幻觉：战略是总裁室的事，执行是员工的事，中间那段最致命的传送带--组织能力--恰恰没人管。这本书用三根支柱讲透一个道理：<strong>员工会不会、愿不愿、被不被允许，这三件事任何一件掉链子，再漂亮的战略都会在半路散架。</strong></p>
+    </section>
+
+    <section>
+      <h2>这本书讲了什么</h2>
+      <p>作者杨国安是中欧国际工商学院教授，也曾长期担任腾讯管理顾问，被业界称为"杨三角"理论的提出者。他在书中提出了一个极简却极具穿透力的框架：企业的持续成功 = 战略 × 组织能力。战略回答"往哪里打"，组织能力回答"凭什么打赢"。而后者，才是大多数公司真正缺的那块拼图。</p>
+      <p>组织能力不是个人能力的简单相加，而是一个团队整体所发挥的战斗力--它深植于组织之内、不依赖某几个明星员工。杨国安把它拆解为三根支柱：<strong>员工能力</strong>（会不会？团队是否具备打赢所需的知识、技能和素质）、<strong>员工思维</strong>（愿不愿？员工是否认同公司价值观、愿意日复一日地投入）、<strong>员工治理</strong>（容不容许？公司是否提供了让能力释放的架构、流程、授权与激励）。三根支柱必须同边对齐、等高支撑，任何一根短板都会漏掉战略落地的水流。</p>
+      <p>全书的后半部分是一套可落地的工具箱：如何通过能力模型和人才盘点补员工能力，如何通过文化塑造和高管以身作则补员工思维，如何通过组织架构、流程再造和激励设计补员工治理。它不是一本讲情怀的书，而是一本讲"组织体检与施工"的操作手册。</p>
+    </section>
+
+    <section>
+      <h2>精华提取 · 3个核心观点</h2>
+      <div class="point">
+        <h3>1. 组织能力是乘法不是加法：一个短板足以清零全局</h3>
+        <p>"持续成功 = 战略 × 组织能力"，用的是乘号而不是加号。这个看似小学数学的符号选择，隐含着一个残酷的管理真相：加法逻辑下，强项可以弥补弱项；乘法逻辑下，任何一项趋近于零，整体就趋近于零。很多科技公司战略清晰、赛道正确，却始终打不赢，问题往往不在"打哪"而在"谁来打、怎么打"。管理者最该警惕的，是那种"战略会控会开的自信"--它让人误以为方向对了就赢了一半，实际上方向只保证了你有资格入场。</p>
+        <div class="example"><p><strong>案例：</strong>书中对比了同一拨人马在不同平台的表现：不少人才从外企跳到民企后，战斗力不升反降。不是能力一夜蒸发，而是新平台的治理方式（层层审批、权责不清）和思维氛围（多做多错、少做少错）把能力"冻结"了。换个环境，同样的电池，一台能跑十小时，一台连开机都困难。</p></div>
+        <blockquote><p>组织能力不是员工能力的总和，而是员工能力在特定治理环境下的"透过率"。</p></blockquote>
+      </div>
+      <div class="point">
+        <h3>2. 三根支柱要对齐：会而不愿、愿而不能，都是组织病不是人的病</h3>
+        <p>杨三角最锋利的地方，是把"执行力差"这个笼统的抱怨拆成了三种不同的"病理":能力问题（不会干）、思维问题（不想干）、治理问题（不让干）。三种病，药方完全不同--不会干要靠招人育人，不想干要靠文化激励，不让干要靠改架构流程。但现实中大量管理者的动作是错位的：员工不想干，他去培训技能；公司不让干，他去喊口号。误诊比不治更可怕，因为每一次错误的干预都在消耗组织的信任存量。</p>
+        <div class="example"><p><strong>案例：</strong>书中提到不少企业高喊创新，考核指标却全是短期业绩，员工很快学会"看考核做事"而不是"看口号做事"。价值观写在墙上，指标才刻在心上--员工最终追随的，永远是被考核、被晋升、被奖励的那套真实规则。</p></div>
+        <blockquote><p>员工不听你说什么，员工看你考核什么。</p></blockquote>
+      </div>
+      <div class="point">
+        <h3>3. 组织能力建设是"一把手工程"：它反直觉，也反授权</h3>
+        <p>杨国安反复强调：组织能力建设无法授权给人力资源部门独立完成，它必须由业务一把手亲自主导、人力部门提供工具支持。这背后有一个很深的逻辑链条：组织能力的三个支柱对应的是"用谁、为何干、怎么管"这三个根本权力，而这三项权力恰恰是管理者最难放手的。把组织建设全推给 HR，本质上是想享受变革收益却不愿支付注意力成本--这样的项目从立项那天起就注定烂尾。</p>
+        <div class="example"><p><strong>案例：</strong>书中分析了诸多企业案例中一个共同模式：凡是组织转型成功的，一把手都深度参与能力标准制定、亲自宣讲价值观、推动治理架构调整；凡是失败的，几乎都是"老板表态、HR操办、业务旁观"的三段式。员工对组织的真实态度，不取决于文件怎么说，而取决于一把手的时间花在哪里。</p></div>
+        <blockquote><p>你的日程表，才是你真正的组织战略。</p></blockquote>
+      </div>
+    </section>
+
+    <section>
+      <h2>为什么现在值得读</h2>
+      <p>大模型时代给所有组织出了一道前所未有的算术题：当 AI 能力以月为单位迭代，个体技能的折旧速度前所未有地加快，"员工能力"这根支柱正在被重新定价。过去一个岗位的能力模型可以管五年，现在可能半年就过时--这意味着组织必须从"招到现成能力"转向"持续生产能力"，学习与再训练不再是福利，而是生存基建。</p>
+      <p>更微妙的变化发生在另外两根支柱上。员工思维层面：当 AI 接管了大量执行性工作，人的价值向判断、协同和创造迁移，命令式管理会加速失灵，"愿不愿"的权重空前上升--不愿意的人，产出质量和大模型时代的要求之间会拉开数量级的差距。员工治理层面：AI 原生的组织需要更快的决策回路、更小的作战单元、数据驱动的资源分配，传统的层层审批治理方式恰恰是让 AI 红利无法落地的最大摩擦力。换句话说，<strong>大模型不会直接淘汰组织，但它会无情地放大组织能力的每一个短板</strong>--乘法公式在技术变革期只会越乘越狠。</p>
+      <p>这也是为什么今天重读这本经典格外应景：它提供的不是特效药，而是一套体检框架。在你的团队启动 AI 转型之前，先用杨三角问自己三个问题--我的人会不懂 AI 的打法吗？他们敢不敢用新的方式工作？我的流程和考核允许他们这样工作吗？三个问题答不出来的转型，预算花多少都是别人的。</p>
+      <blockquote><p>技术越强大，组织能力的短板暴露得越快；AI 时代拼到最后，拼的不是谁买了最好的模型，而是谁的三角不漏水。</p></blockquote>
+    </section>
+
+    <section>
+      <h2>播客分享开场白</h2>
+      <p>先问你一个问题：你有没有见过这样的同事--在前一家公司是公认的明星员工，跳槽之后却变得平平无奇？人还是那个人，怎么就不行了呢？我们总习惯把原因归结为"水土不服"，但今天这本书会告诉你：根本没有什么水土不服，只有组织能不能让一个人的能力"透过"出来。</p>
+      <p>这本书的作者杨国安，被很多管理者称为"组织医生的祖师爷"。他一辈子只研究一个问题：为什么同样的战略，有的组织能落地，有的组织只能开会？他的答案简单到只有一个三角形，三根柱子：员工会不会，愿不愿，被不被允许。听起来像大白话？但你不妨现在就在心里给你的团队打个分--三根柱子，哪根最短？</p>
+      <p>我猜大多数人打完分会沉默一下。因为你会发现，你们公司最短的那根柱子，恰恰是花钱最少、开会最少、一把手过问最少的那一根。接下来十几分钟，我们就聊聊这个三角形，怎么照出一家公司的真实战斗力。</p>
+    </section>
+
+    <section>
+      <h2>延伸思考</h2>
+      <ol class="reflection">
+        <li>用杨三角给团队做一次体检：员工能力、员工思维、员工治理，哪根支柱最短？过去一年公司在最短的那根柱子上投入了多少管理注意力？</li>
+        <li>你所在组织的考核与晋升，真正奖励的行为和你希望出现的行为是一致的吗？如果不一致，员工最终会追随哪一套规则？</li>
+        <li>AI 工具大量进入工作流后，"员工能力"的内涵正在改变：当执行被机器接管，人的不可替代性将集中在哪根支柱上？你的组织在为那个变化做准备吗？</li>
+      </ol>
+    </section>
+
+    <footer class="footer">
+      <p><span class="label">适合读者：</span>团队管理者、HR 从业者、正推动组织转型或被"执行不力"困扰的高科技行业职场人</p>
+      <p><span class="label">关键词：</span>组织能力、杨三角、员工治理、战略落地、AI 组织转型</p>
+    </footer>
+  </main>
