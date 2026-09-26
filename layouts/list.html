@@ -96,33 +96,79 @@
   {{- if eq .RelPermalink "/zh/categories/ai-native/" }}
     {{- $weeklies := where $sorted "Params.tags" "intersect" (slice "ai-native-weekly") }}
     {{- $articles := $sorted | complement $weeklies }}
+    {{- $latestArticle := index (last 1 $articles) 0 }}
+    {{- $latestWeekly := index (last 1 $weeklies) 0 }}
 
-    {{- with $articles }}
-    <h2 class="zen-section-header" style="margin-top: 2rem; margin-bottom: 1rem; text-align: left; opacity: 1; color: var(--text-primary); font-size: 1rem;">📄 文章</h2>
-    <ol class="zen-article-list zen-numbered fade-in">
-      {{- range $i, $p := . }}
-      {{- $stats := partial "chinese_stats.html" $p }}
-      <li>
-        <span class="zen-num">{{ printf "%02d" (add $i 1) }}</span>
-        <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
-        <div class="zen-meta">{{ $p.Date.Format "2006.01.02" }} · {{ $stats.readingTime }} min read</div>
-      </li>
+    {{- /* 顶部精选：最新文章 + 最新周报 */}}
+    {{- if or $latestArticle $latestWeekly }}
+    <section class="zen-ai-featured fade-in" aria-label="AI Native 精选">
+      {{- with $latestArticle }}
+      {{- $stats := partial "chinese_stats.html" . }}
+      <article class="zen-ai-featured-card">
+        <span class="zen-ai-eyebrow">最新文章</span>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <p class="zen-ai-excerpt">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | htmlUnescape | truncate 140 }}{{ end }}</p>
+        <div class="zen-meta">{{ .Date.Format "2006.01.02" }} · {{ $stats.readingTime }} min read</div>
+      </article>
       {{- end }}
-    </ol>
+      {{- with $latestWeekly }}
+      {{- $stats := partial "chinese_stats.html" . }}
+      {{- $issueNum := "" }}
+      {{- if findRE `第\d+期` .Title }}{{ $issueNum = replaceRE `.*第(\d+)期.*` "$1" .Title }}{{ end }}
+      <article class="zen-ai-featured-card zen-ai-featured-weekly">
+        <span class="zen-ai-eyebrow">最新周报</span>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <p class="zen-ai-excerpt">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | htmlUnescape | truncate 140 }}{{ end }}</p>
+        <div class="zen-meta">
+          {{- if $issueNum }}<span class="zen-ai-badge">第 {{ $issueNum }} 期</span>{{ end }}
+          <span>{{ .Date.Format "2006.01.02" }} · {{ $stats.readingTime }} min read</span>
+        </div>
+      </article>
+      {{- end }}
+    </section>
     {{- end }}
 
-    {{- with $weeklies }}
-    <h2 class="zen-section-header" style="margin-top: 3rem; margin-bottom: 1rem; text-align: left; opacity: 1; color: var(--text-primary); font-size: 1rem;">📰 组织变革周报</h2>
-    <ol class="zen-article-list zen-numbered fade-in">
-      {{- range $i, $p := . }}
-      {{- $stats := partial "chinese_stats.html" $p }}
-      <li>
-        <span class="zen-num">{{ printf "%02d" (add $i 1) }}</span>
-        <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
-        <div class="zen-meta">{{ $p.Date.Format "2006.01.02" }} · {{ $stats.readingTime }} min read</div>
-      </li>
-      {{- end }}
-    </ol>
+    {{- /* 文章列表：卡片网格 */}}
+    {{- with $articles }}
+    <section class="zen-ai-section fade-in" aria-label="AI Native 文章">
+      <div class="zen-ai-section-header">
+        <h2>📄 文章</h2>
+        <span class="zen-ai-count">{{ len . }} 篇</span>
+      </div>
+      <div class="zen-ai-articles-grid">
+        {{- range . }}
+        {{- $stats := partial "chinese_stats.html" . }}
+        <article class="zen-ai-article-card">
+          <a href="{{ .Permalink }}" class="zen-ai-card-title">{{ .Title }}</a>
+          <p class="zen-ai-card-excerpt">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | htmlUnescape | truncate 100 }}{{ end }}</p>
+          <div class="zen-meta">{{ .Date.Format "2006.01.02" }} · {{ $stats.readingTime }} min read</div>
+        </article>
+        {{- end }}
+      </div>
+    </section>
+    {{- end }}
+
+    {{- /* 组织变革周报：紧凑时间线（最新在前） */}}
+    {{- $weekliesDesc := sort $weeklies "Date" "desc" }}
+    {{- with $weekliesDesc }}
+    <section class="zen-ai-section fade-in" aria-label="组织变革周报">
+      <div class="zen-ai-section-header">
+        <h2>📰 组织变革周报</h2>
+        <span class="zen-ai-count">{{ len . }} 期</span>
+      </div>
+      <ol class="zen-ai-weeklies-list">
+        {{- range . }}
+        {{- $stats := partial "chinese_stats.html" . }}
+        {{- $issueNum := "" }}
+        {{- if findRE `第\d+期` .Title }}{{ $issueNum = replaceRE `.*第(\d+)期.*` "$1" .Title }}{{ end }}
+        <li>
+          {{- if $issueNum }}<span class="zen-ai-issue">第 {{ $issueNum }} 期</span>{{ end }}
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+          <span class="zen-ai-weekly-date">{{ .Date.Format "2006.01.02" }}</span>
+        </li>
+        {{- end }}
+      </ol>
+    </section>
     {{- end }}
 
   {{- else }}
