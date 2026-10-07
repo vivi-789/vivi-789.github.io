@@ -1,5 +1,5 @@
 ---
-title: "AI Native 组织变革周报 - 2026年8月24日"
+title: "AI Native 组织变革周报 · 第11期 · 2026年8月24日"
 slug: "ai-native-weekly-2026-08-24"
 date: 2026-08-24T15:00:00+08:00
 draft: false
@@ -101,7 +101,7 @@ description: "第10期（2026年08月24日），7 条精选内容。\"AI 工作�
   <h1>AI Native 组织变革周报</h1>
   <div class="meta">
     <span>📅 2026年8月24日（周日）</span>
-    <span>📊 第10期</span>
+    <span>📊 第11期</span>
     <span>🎬 7 条精选内容</span>
   </div>
 </div>

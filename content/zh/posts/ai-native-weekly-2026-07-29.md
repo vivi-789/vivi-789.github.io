@@ -1,5 +1,5 @@
 ---
-title: "AI Native 组织变革周报 - 2026年7月29日"
+title: "AI Native 组织变革周报 · 第6期 · 2026年7月29日"
 slug: "ai-native-weekly-2026-07-29"
 date: 2026-07-29T15:00:00+08:00
 draft: false
@@ -128,7 +128,7 @@ description: "第5期：Microsoft CVP 宣告'无组织架构'时代到来，全�
   <h1>AI Native 组织变革周报</h1>
   <div class="meta">
     <span>📅 2026年7月29日（周三）</span>
-    <span>📊 第5期</span>
+    <span>📊 第6期</span>
     <span>🎬 10 条精选内容</span>
   </div>
 </div>

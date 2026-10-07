@@ -1,5 +1,5 @@
 ---
-title: "AI Native 组织变革周报 - 2026年9月14日"
+title: "AI Native 组织变革周报 · 第14期 · 2026年9月14日"
 slug: "ai-native-weekly-2026-09-14"
 date: 2026-09-14T15:00:00+08:00
 draft: false
@@ -101,7 +101,7 @@ description: "第13期（2026年09月14日），6 条精选内容。AI 安全议
   <h1>AI Native 组织变革周报</h1>
   <div class="meta">
     <span>📅 2026年9月14日</span>
-    <span>📊 第13期</span>
+    <span>📊 第14期</span>
     <span>🎬 6 条精选内容</span>
   </div>
 </div>

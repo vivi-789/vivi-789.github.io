@@ -1,5 +1,5 @@
 ---
-title: "AI Native 组织变革周报 - 2026年8月17日"
+title: "AI Native 组织变革周报 · 第10期 · 2026年8月17日"
 slug: "ai-native-weekly-2026-08-17"
 date: 2026-08-17T15:00:00+08:00
 draft: false
@@ -100,7 +100,7 @@ description: "第9期（修订版）：视频来源已全部核实。精选 Snow
   <h1>AI Native 组织变革周报</h1>
   <div class="meta">
     <span>📅 2026年8月17日</span>
-    <span>📊 第9期（修订版）</span>
+    <span>📊 第10期（修订版）</span>
     <span>🎬 7 条精选内容</span>
   </div>
 </div>

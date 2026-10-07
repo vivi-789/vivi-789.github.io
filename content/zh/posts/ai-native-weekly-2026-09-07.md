@@ -1,5 +1,5 @@
 ---
-title: "AI Native 组织变革周报 - 2026年9月7日"
+title: "AI Native 组织变革周报 · 第13期 · 2026年9月7日"
 slug: "ai-native-weekly-2026-09-07"
 date: 2026-09-07T15:00:00+08:00
 draft: false
@@ -101,7 +101,7 @@ description: "第12期（2026年09月07日），6 条精选内容。Altman 首�
   <h1>AI Native 组织变革周报</h1>
   <div class="meta">
     <span>📅 2026年9月7日</span>
-    <span>📊 第12期</span>
+    <span>📊 第13期</span>
     <span>🎬 6 条精选内容</span>
   </div>
 </div>

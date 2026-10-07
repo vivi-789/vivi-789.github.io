@@ -1,5 +1,5 @@
 ---
-title: "AI Native 组织变革周报 - 2026年7月23日"
+title: "AI Native 组织变革周报 · 第4期 · 2026年7月23日"
 slug: "ai-native-weekly-2026-07-23"
 date: 2026-07-23T15:00:00+08:00
 draft: false

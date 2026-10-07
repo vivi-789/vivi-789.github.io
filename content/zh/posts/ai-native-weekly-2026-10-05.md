@@ -1,5 +1,5 @@
 ---
-title: "AI Native 组织变革周报 · 第16期 · 2026年10月5日"
+title: "AI Native 组织变革周报 · 第17期 · 2026年10月5日"
 slug: "ai-native-weekly-2026-10-05"
 date: 2026-10-05T15:00:00+08:00
 draft: false
@@ -197,7 +197,7 @@ footer {
 <div class="container">
 
 <header class="report-header">
-  <div class="issue">AI NATIVE 组织变革周报 · 第16期</div>
+  <div class="issue">AI NATIVE 组织变革周报 · 第17期</div>
   <h1>AI Native 组织变革周报</h1>
   <div class="meta">
     <span>2026年10月5日</span>

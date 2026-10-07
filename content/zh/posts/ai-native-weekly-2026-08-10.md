@@ -1,5 +1,5 @@
 ---
-title: "AI Native 组织变革周报 - 2026年8月10日"
+title: "AI Native 组织变革周报 · 第9期 · 2026年8月10日"
 slug: "ai-native-weekly-2026-08-10"
 date: 2026-08-10T15:00:00+08:00
 draft: false
@@ -101,7 +101,7 @@ description: "第8期：Ramp宣布不设token预算，反AI叙事首次获得主
   <h1>AI Native 组织变革周报</h1>
   <div class="meta">
     <span>📅 2026年8月10日（周六）</span>
-    <span>📊 第8期</span>
+    <span>📊 第9期</span>
     <span>🎬 10 条精选内容</span>
   </div>
 </div>
