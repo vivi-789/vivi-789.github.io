@@ -1,7 +1,7 @@
 ---
-title: "AI Native 组织变革周报 · 第?期 · 未知日期"
-slug: "ai-native-weekly-2026-11-14"
-date: 2026-11-14T15:00:00+08:00
+title: "AI Native 组织变革周报 · 第21期 · 2026年11月9日"
+slug: "ai-native-weekly-2026-11-09"
+date: 2026-11-09T15:00:00+08:00
 draft: false
 disableToc: true
 hideMeta: true
@@ -9,7 +9,7 @@ fullWidth: true
 categories: ["ai-native"]
 tags: ["ai-native-weekly", "AI Native", "组织变革", "AI Agent", "企业落地"]
 description: >
-  第?期（未知日期），6 精选视频。Agent 交付占比成为公司级 AI 采用新度量；Workday CEO 将回归定义为 refounding moment；Vista 创始人提出 software as a worker 三部曲；Dynatrace CTO 指出信任而非成本是 Agentic AI 天花板；Matt Pocock 复盘 spec-driven 失败与信任阶梯。附 12 条可执行行动建议。
+  第21期（2026年11月9日），6 精选视频。Agent 交付占比成为公司级 AI 采用新度量；Workday CEO 将回归定义为 refounding moment；Vista 创始人提出 software as a worker 三部曲；Dynatrace CTO 指出信任而非成本是 Agentic AI 天花板；Matt Pocock 复盘 spec-driven 失败与信任阶梯。附 12 条可执行行动建议。
 ---
 
 {{< rawhtml >}}
