@@ -1,5 +1,5 @@
 ---
-title: "AI Native 组织变革周报 · 第?期 · 未知日期"
+title: "AI Native 组织变革周报 · 第20期 · 2026年11月2日"
 slug: "ai-native-weekly-2026-11-02"
 date: 2026-11-02T15:00:00+08:00
 draft: false
@@ -9,7 +9,7 @@ fullWidth: true
 categories: ["ai-native"]
 tags: ["ai-native-weekly", "AI Native", "组织变革", "AI Agent", "企业落地"]
 description: >
-  第?期（未知日期），6 精选视频。本期聚焦 AI Native 组织变革的前沿实践与观点。
+  第20期（2026年11月2日），6 精选视频。本期聚焦 AI Native 组织变革的前沿实践与观点。
 ---
 
 {{< rawhtml >}}
